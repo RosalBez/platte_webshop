@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Shopingcart(props) {
+function Shoppingcart(props) {
     return (
         <div>
             <h2> jouw winkelmandje</h2>
@@ -9,4 +9,4 @@ function Shopingcart(props) {
     );
 }
 
-export default Shopingcart;
+export default Shoppingcart;
