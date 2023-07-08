@@ -1,0 +1,177 @@
+/******default*******/
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+
+
+}
+
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-grow: 0;
+    width: 100%;
+
+
+
+}
+
+.inner-container {
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 20px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+/*////////////header//////////////*/
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100%;
+    flex-grow: 0;
+    flex-shrink: 2;
+}
+
+.header-image {
+    position: relative;
+    display: inline-block;
+    max-width: 100vw;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+}
+
+/**********************shop button************/
+
+
+.header-button {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #261397;
+    background-color: #F68037;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+
+}
+
+.header-button:hover {
+    /* Stijl bij hover */
+    background-color: #C2B8ED;
+    color: #261397;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 2px 0 4px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+
+/**********log in button and picture*************/
+.login-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-top: 20px;
+}
+
+.login-picture {
+    width: 65vh;
+    transform: matrix(1, -0.09, 0.09, 1, 0, 0)
+
+}
+
+
+.login-signature {
+    width: 15vw;
+    position: absolute;
+    top: 103%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.login-button {
+    width: 15vw;
+    position: absolute;
+    top: 109%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #F68037;
+    border: none;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    text-decoration: underline;
+}
+
+/********log in text**********/
+
+.login-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.login-text > h2 {
+    margin-bottom: 30px;
+}
+
+
+.register-button {
+    width: 15vw;
+    height: 5vh;
+    position: absolute;
+    top: 155%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    background-color: #C2B8ED;
+    color: #261397;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+/********nieuw section***********/
+
+.new-section {
+    font-size: 16px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #261397;
+    margin-top: 105px;
+    margin-bottom: 105px;
+    border: blue;
+    border-style: solid;
+}

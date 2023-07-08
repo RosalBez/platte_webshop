@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+// import axios from "axios";
+import {Routes, Route} from 'react-router-dom'
+import Nav from "./Components/NavBar/Nav";
+import Home from './Pages/home/Home';
+import Footer from "./Components/Footer/Footer"
+import About from "./Pages/about/about";
+import Products from "./Pages/Products/Products";
+import Shoppingcart from "./Pages/Shoppingcart/Shoppingcart";
+import RegisterSignIn from "./Pages/Register-sign-in/Register-sign-in";
+import NotFound from "./Components/NotFound/NotFound";
+import FAQS from "./Pages/FAQS/FAQS"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <>
+            <div className="container">
+                <Nav/>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/about' element={<About/>}/>
+                    <Route path='/products' element={<Products/>}/>
+                    <Route path='/register-sign-in' element={<RegisterSignIn/>}/>
+                    <Route path='/shoppingcart' element={<Shoppingcart/>}/>
+                    <Route path='/FAQS' element={<FAQS/>}/>
+                    <Route path='*' element={<NotFound/>}/>
+                </Routes>
+                <Footer/>
 
-export default App;
+            </div>
+
+        </>
+            );
+            }
+
+            export default App;
+
+
+
