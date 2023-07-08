@@ -8,7 +8,7 @@ import Footer from "./Components/Footer/Footer"
 import About from "./Pages/about/about";
 import Products from "./Pages/Products/Products";
 import Shoppingcart from "./Pages/Shoppingcart/Shoppingcart";
-import RegisterSignIn from "./Pages/Register-sign-in/Register-sign-in";
+import Register_sign_in from "./Pages/Register-sign-in/Register_sign_in";
 import NotFound from "./Components/NotFound/NotFound";
 import FAQS from "./Pages/FAQS/FAQS"
 
@@ -21,7 +21,7 @@ function App() {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/about' element={<About/>}/>
                     <Route path='/products' element={<Products/>}/>
-                    <Route path='/register-sign-in' element={<RegisterSignIn/>}/>
+                    <Route path='/register_sign_in' element={<Register_sign_in/>}/>
                     <Route path='/shoppingcart' element={<Shoppingcart/>}/>
                     <Route path='/FAQS' element={<FAQS/>}/>
                     <Route path='*' element={<NotFound/>}/>

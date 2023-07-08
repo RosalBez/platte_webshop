@@ -1,59 +1,47 @@
 import React from 'react';
-import './about.css';
-import signature from '../../assets/Specifics/signatuur.svg'
+import './about.css'
+import Card from '../../Components/Card/Card'
 import layingGirl from '../../assets/photos/login.jpg'
-function About() {
+import aboutSignature from '../../assets/Specifics/signatuur.svg'
+import contactGirl from '../../assets/photos/contact.PNG.jpg'
+// import Contact from '../../Components/contact/contact'
+
+function About(props) {
     return (
-        <>
-            <div className='outer-container'>
-                <section className='about-section-one'>
-                    <h2> over RSL </h2>
-                    <p> OVER RSL
+        <div className='outer-container-about'>
+            <div className='inner-container-about'>
+                <img src={layingGirl} alt='laying girl' className='about-laying-girl'/>
+                <Card title='Over RSL' className='about-card'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque enim eos maiores natus
+                        repudiandae! A accusamus accusantium aliquam aliquid amet aperiam atque cum cumque debitis
+                        deserunt earum eius, error est expedita facere ipsa ipsam iusto libero maxime mollitia natus,
+                        nobis non numquam obcaecati possimus quia quis quos recusandae reiciendis sed tempore ullam
+                        veniam vitae. Amet cumque deserunt, enim exercitationem expedita laudantium, libero nulla odit
+                        pariatur provident quae tenetur ullam voluptatum. At aut commodi consectetur, dicta distinctio
+                        dolore ducimus et eum fugiat, iusto magnam molestiae nobis odit pariatur perspiciatis placeat
+                        praesentium provident quae quam quidem reprehenderit sint unde velit veritatis voluptate?
+                        Accusamus ad at doloremque fugiat iure minima molestias nihil rem sapiente, vero. Ad adipisci
+                        assumenda debitis esse et, iure libero nobis, pariatur, perspiciatis quae quia repudiandae unde
+                        veritatis. Ad aliquid, aperiam aspernatur consequuntur cumque delectus distinctio doloremque
+                        enim error hic ipsam, iure minima nemo officiis perspiciatis placeat qui quo voluptatibus.
 
-                        hadslkfjhsadkfjhsdalkjfhasdfa\dsalkjhfasf
-                        asdfasdk dsakfljsdafsafl asdfkjdsaflsdakfjsa fsl asldldfjdk]\dakjhldaf asdkjf
-                        asdfjajhsflkdsajflsdakjfdslkfjdsaf
-                        dsakfjhsdalkfjs
-                        sdakfjdsalfkjsdafl;ksdajflksdajflsdakjfdlsakjfsdkalfjsd
-                        dasfkdasjfdklsa dsakfljsdafsafl asdfkjdsaflsdakfjsa fsl asldldfjdk]\dakjhldaf asdkjf aasldk
-                        dakjfdfdkjdkfjasdaslfja
+                        <div> xxx RSL </div>
+                        <img src={aboutSignature} alt='signature'/>
 
-                        hadslkfjhsadkfjhsdalkjfhasdfa\dsalkjhfasf
-                        asdfasdk dsakfljsdafsafl asdfkjdsaflsdakfjsa fsl asldldfjdk]\dakjhldaf asdkjf
-                        asdfjajhsflkdsajflsdakjfdslkfjdsaf
-                        dsakfjhsdalkfjs
-                        sdakfjdsalfkjsdafl;ksdajflksdajflsdakjfdlsakjfsdkalfjsd
-                        dasfkdasjfdklsa dsakfljsdafsafl asdfkjdsaflsdakfjsa fsl asldldfjdk]\dakjhldaf asdkjf aasldk
-                        dakjfdfdkjdkfjasdaslfja
+                    </p> </Card>
 
-                        hadslkfjhsadkfjhsdalkjfhasdfa\dsalkjhfasf
-                        asdfasdk dsakfljsdafsafl asdfkjdsaflsdakfjsa fsl asldldfjdk]\dakjhldaf asdkjf
-                        asdfjajhsflkdsajflsdakjfdslkfjdsaf
-                        dsakfjhsdalkfjs
-                        sdakfjdsalfkjsdafl;ksdajflksdajflsdakjfdlsakjfsdkalfjsd
-                        dasfkdasjfdklsa dsakfljsdafsafl asdfkjdsaflsdakfjsa fsl asldldfjdk]\dakjhldaf asdkjf aasldk
-                        dakjfdfdkjdkfjasdaslfja
-                        sdkajfdlfjasdlkfjdsalfas?
-                        dkajkldjlfkjkdsafajfdak fjdsa lfkjsdafl;ksdajflksdajflsd akjfdlsakjfsdka lfjsd
-                        dasfkdasjfd klsa dsakfljsd afsafl asdfkjdsaflsdakfjsa fsl asldldfjdk]\dakjhldaf asdk jfaasldk
-                        dakjfdfdkjdkfjasdaslfja
-                        sdkajfdlfjasdlkfjdsalfas?
-                        dkajkldjlfkjkdsafajf
-
-                        xxx </p>
-                    <img src={signature} alt='signature' className='about-signature'/>
-                </section>
-
-                <section className='about-section-two'>
-                    <h2> nog meer</h2>
-                    <p>nog meer nog meer</p>
-                    <img src={layingGirl} alt='laying-girl' className='about-laying-girl'/>
-                </section>
             </div>
-        </>
-    )
-        ;
 
+            <div className='inner-container-contact'>
+                <img src={contactGirl} alt='contact girl' className='contact-girl'/>
+                <Card title='Contact' className='contact-card'>
+                    <p> hier komt een formulier </p>
+                </Card>
+
+            </div>
+
+        </div>
+    );
 }
 
 export default About;

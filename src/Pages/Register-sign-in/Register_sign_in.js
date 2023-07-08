@@ -1,6 +1,6 @@
 import React from 'react';
 
-function RegisterSignIn(props) {
+function Register_sign_in(props) {
     return (
         <div>
             <h2> Log In of Registreer</h2>
@@ -9,4 +9,4 @@ function RegisterSignIn(props) {
     );
 }
 
-export default RegisterSignIn;
+export default Register_sign_in;
