@@ -11,7 +11,7 @@ import shop from '../../assets/Specifics/shop.svg'
 function Nav(props) {
     return (
 
-            <nav className="inner-content-container navigation">
+            <nav className="outer-content-container navigation">
                 <div className='left-side-nav'>
                     <ul>
                         <li>

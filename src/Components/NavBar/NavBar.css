@@ -25,6 +25,7 @@ nav ul a:visited{
     flex-grow: 0;
     flex-shrink: 1;
 
+
 }
 
 .left-side-nav > ul {
@@ -70,7 +71,7 @@ nav ul a:visited{
 .logo {
     width: 30px;
     height: 40px;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 0px;
 
 
 }

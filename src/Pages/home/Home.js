@@ -24,7 +24,7 @@ function Home() {
                     <span className='login'>
                         <img src={login} alt='laying girl with sunglasses' className='login-picture'/>
                         <img src={signature} alt='signature' className='login-signature'/>
-                        <NavLink to='/register_sign_in'>
+                        <NavLink to='/RegisterSignIn'>
                             <Button className='login-button' title='Log In'/>
                         </NavLink>
 

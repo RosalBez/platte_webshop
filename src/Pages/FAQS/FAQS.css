@@ -1,10 +1,40 @@
 h2 {
     color: #261397;
+    padding-left: 15px;
+    font-size: 24px;
+    padding-top: 20px;
 }
 
-.faq-section {
-    flex-basis: auto;
+
+
+.faq-section-two {
     width: 75vw;
-    margin-bottom: 20px;
-    border-color: #261397;
+    margin: 20px 0px;
+    color: #261397;
+    border: 3px solid #F68037;
+    padding: 15px;
+    border-radius: 25px 0px;
+
 }
+
+.faq-last-question {
+    padding: 15px;
+    color: #F68037;
+    font-size: 16px;
+    width: 65vw;
+}
+
+
+
+.faq-contact {
+    color: #F68037;
+    text-decoration: none;
+    font-size: 16px;
+
+}
+
+.faq-contact:hover {
+    text-decoration: underline;
+    color: #261397;
+}
+

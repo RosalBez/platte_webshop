@@ -1,19 +1,21 @@
-.faq-section {
-
-}
 
 .faq-details {
-    border-color: solid red;
+    padding: 15px;
 }
 
 .faq-question {
     color: #261397;
+    font-size: 21px;
 }
 
 .faq-answer {
-    color: #261397;
+    color: #C2B8ED;
+    font-size: 16px;
+    width: 65vw;
 }
 
 .faq-question:hover {
     cursor: pointer;
+    color: #F68037;
 }
+
