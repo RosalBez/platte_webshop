@@ -9,13 +9,20 @@ function Contact() {
 
     function handleSubmit(e) {
         e.preventDefault();
+
         console.log(`
-    Naam: ${nameValue}, 
-    Email: ${emailValue}, 
+    Naam: ${nameValue},
+    Email: ${emailValue},
     Bericht: ${messageValue}
-    `);
-        console.log (`${nameValue}, ${emailValue}, ${messageValue}`);
+  `);
+        e.target.reset();
+        setNameValue('');
+        setEmailValue('');
+        setMessageValue('');
+
+        console.log(`${nameValue}, ${emailValue}, ${messageValue}`);
     }
+
 
     return (
         <>
@@ -46,14 +53,15 @@ function Contact() {
                     />
                 </label>
 
-                <label htmlFor='message' className='label'>
+                <label htmlFor='message' className='label-message'>
                     bericht:
-                    <input
+                    <textarea
                         className='label-input'
-                        type='message'
                         id='form-message'
                         name='message'
                         value={messageValue}
+                        rows={8}
+                        cols={50}
                         onChange={(e) => setMessageValue(e.target.value)}
                     />
                 </label>

@@ -1,0 +1,19 @@
+.faq-section {
+
+}
+
+.faq-details {
+    border-color: solid red;
+}
+
+.faq-question {
+    color: #261397;
+}
+
+.faq-answer {
+    color: #261397;
+}
+
+.faq-question:hover {
+    cursor: pointer;
+}

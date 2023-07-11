@@ -24,6 +24,24 @@
 
 }
 
+.label-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.label-message > textarea {
+    border-color: #C2B8ED;
+    color: #261397;
+}
+
+.label-message > textarea :  {
+    border-color: none;
+}
+
+
 
 .button {
     display: flex;
@@ -31,10 +49,9 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-
 }
 
-
-
-
-
+.button > button {
+    text-transform: uppercase;
+    border-radius: 25px;
+}

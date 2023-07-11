@@ -31,7 +31,14 @@
 
 .about-card > p {
     width: 20vw;
+    color: #F68037;
 
+}
+
+.about-card > h2 {
+    color: #261397;
+    text-transform: uppercase;
+    font-weight: lighter;
 }
 
 .about-card > p > div {
@@ -51,6 +58,11 @@
     width: 31vw;
     height: 75vh;
     margin-bottom: 150px;
+    border: 2px solid #C2B8ED;
+    padding: 8px;
+    border-radius: 25px 0px;
+
+
 
 }
 
@@ -84,6 +96,10 @@
     width: 25vw;
     height: 75vh;
     margin-bottom: 150px;
+    border: 2px solid #F68037;
+    padding: 8px;
+    border-radius: 0px 25px;
+
 
 }
 
@@ -94,5 +110,12 @@
     justify-content: center;
     flex-shrink: 1;
     flex-grow: 0;
+    color: #261397;
 
+}
+
+.contact-card > h2 {
+    color: #F68037;
+    text-transform: uppercase;
+    font-weight: lighter;
 }

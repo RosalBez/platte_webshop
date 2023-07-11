@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Cabin Condensed', sans-serif;
-    /*background-color: #F5E4DA;*/
+    background-color: transparent;
 }
 
 h1, h2 {
@@ -47,10 +47,10 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*!*flex-basis: 1200px;*!*/
-    /*flex-shrink: 1;*/
-    /*flex-grow: 0;*/
-    /*margin: 0 20px;*/
+    flex-basis: 1200px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 0 20px;
 }
 
 

@@ -1,0 +1,10 @@
+h2 {
+    color: #261397;
+}
+
+.faq-section {
+    flex-basis: auto;
+    width: 75vw;
+    margin-bottom: 20px;
+    border-color: #261397;
+}

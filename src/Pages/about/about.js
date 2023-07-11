@@ -3,7 +3,7 @@ import './about.css'
 import Card from '../../Components/Card/Card'
 import layingGirl from '../../assets/photos/login.jpg'
 import aboutSignature from '../../assets/Specifics/signatuur.svg'
-import contactGirl from '../../assets/photos/contact.PNG.jpg'
+import contactGirl from '../../assets/photos/contactgirl.jpg'
 import Contact from "../../Components/Contact/Contact";
 
 
