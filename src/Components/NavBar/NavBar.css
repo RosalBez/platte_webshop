@@ -17,7 +17,7 @@ nav ul a:visited{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 5vh;
     padding-top: 38px;
     padding-bottom: 30px;
@@ -30,7 +30,7 @@ nav ul a:visited{
 .left-side-nav > ul {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     list-style: none;
 
@@ -41,7 +41,7 @@ nav ul a:visited{
 .right-side-nav > ul {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
 

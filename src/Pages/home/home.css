@@ -1,58 +1,7 @@
 /******default*******/
 
-body {
-    width: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: transparent;
-
-
-}
-
-
-.outer-container {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 1;
-    flex-grow: 0;
-    width: 100%;
-
-
-
-}
-
-.inner-container {
-    display: flex;
-    flex-direction:column;
-    margin-bottom: 20px;
-    flex-shrink: 1;
-    flex-grow: 0;
-    width: 100%;
-    padding: 20px;
-}
-
 /*////////////header//////////////*/
 
-.header-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 100%;
-    flex-grow: 0;
-    flex-shrink: 2;
-}
-
-.header-image {
-    position: relative;
-    display: inline-block;
-    max-width: 100vw;
-    flex-grow: 0;
-    flex-shrink: 1;
-
-}
 
 /**********************shop button************/
 
@@ -65,12 +14,13 @@ body {
 
     text-align: center;
     text-transform: uppercase;
+    font-size: 21px;
     color: #261397;
     background-color: #F68037;
     border: none;
     border-radius: 25px;
-    width: 200px;
-    height: 40px;
+    width: 17vw;
+    height: 7vh;
     margin-top: 20px;
 
 }
@@ -84,21 +34,17 @@ body {
 }
 
 /**********log in button and picture*************/
-.login-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .login {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     flex-grow: 0;
     flex-shrink: 1;
-    margin-top: 20px;
+    margin-top: 160px;
+    gap: 70px;
 }
 
 .login-picture {
@@ -111,7 +57,7 @@ body {
 .login-signature {
     width: 15vw;
     position: absolute;
-    top: 103%;
+    top: 130%;
     left: 40%;
     transform: translate(-50%, -50%);
 }
@@ -119,7 +65,7 @@ body {
 .login-button {
     width: 15vw;
     position: absolute;
-    top: 109%;
+    top: 137%;
     left: 46%;
     transform: translate(-50%, -50%);
     background-color: transparent;
@@ -135,17 +81,13 @@ body {
 /********log in text**********/
 
 .login-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70vh;
+    width: 30vw;
     text-align: center;
-    margin-left: 40px;
+
 }
 
 .login-text > h2 {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 
@@ -153,9 +95,10 @@ body {
     width: 15vw;
     height: 5vh;
     position: absolute;
-    top: 155%;
-    left: 67%;
-    transform: translate(-50%, -50%);
+    top: 175%;
+    left: 63%;
+    margin-top: 20px;
+
     background-color: #C2B8ED;
     color: #261397;
     border: none;
@@ -170,8 +113,8 @@ body {
     text-decoration: underline;
     text-transform: uppercase;
     color: #261397;
-    margin-top: 105px;
-    margin-bottom: 105px;
+    margin-top: 305px;
+    margin-bottom:  305px;
     border: blue;
     border-style: solid;
 }

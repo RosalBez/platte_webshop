@@ -4,9 +4,10 @@ import Card from '../../Components/Card/Card'
 import layingGirl from '../../assets/photos/login.jpg'
 import aboutSignature from '../../assets/Specifics/signatuur.svg'
 import contactGirl from '../../assets/photos/contact.PNG.jpg'
-// import Contact from '../../Components/contact/contact'
+import Contact from "../../Components/Contact/Contact";
 
-function About(props) {
+
+function About() {
     return (
         <div className='outer-container-about'>
             <div className='inner-container-about'>
@@ -35,8 +36,9 @@ function About(props) {
             <div className='inner-container-contact'>
                 <img src={contactGirl} alt='contact girl' className='contact-girl'/>
                 <Card title='Contact' className='contact-card'>
-                    <p> hier komt een formulier </p>
+                    <Contact/>
                 </Card>
+
 
             </div>
 

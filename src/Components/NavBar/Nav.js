@@ -10,51 +10,54 @@ import shop from '../../assets/Specifics/shop.svg'
 
 function Nav(props) {
     return (
-        <nav className="navigation">
-            <div className='left-side-nav'>
-                <ul>
-                    <li>
-                        <NavLink to="/" className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                            <img src={logo} alt='logo' className='logo'/>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/about'
-                                 className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                            <img src={about} alt='about' className='about'/>
-                        </NavLink>
-                    </li>
+
+            <nav className="inner-content-container navigation">
+                <div className='left-side-nav'>
+                    <ul>
+                        <li>
+                            <NavLink to="/"
+                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
+                                <img src={logo} alt='logo' className='logo'/>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/about'
+                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
+                                <img src={about} alt='about' className='about'/>
+                            </NavLink>
+                        </li>
                     </ul>
-            </div>
+                </div>
 
-            <div className='right-side-nav'>
-                <ul>
-                    <li>
-                        <NavLink to='/products'
-                                 className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                            <img src={shop} alt='shop' className='shop'/>
-                        </NavLink>
-                    </li>
-                    <li><SearchBar/></li>
-                    <li>
-                        <NavLink to='/register_sign_in'
-                                 className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                            <img src={profile} alt='profile' className='profile'/>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/shoppingcart'
-                                 className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                            <img src={basket} alt='basket' className='basket'/>
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                <div className='right-side-nav'>
+                    <ul>
+                        <li>
+                            <NavLink to='/products'
+                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
+                                <img src={shop} alt='shop' className='shop'/>
+                            </NavLink>
+                        </li>
+                        <li><SearchBar/></li>
+                        <li>
+                            <NavLink to='/register_sign_in'
+                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
+                                <img src={profile} alt='profile' className='profile'/>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/shoppingcart'
+                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
+                                <img src={basket} alt='basket' className='basket'/>
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
 
-)
-;
+
+    )
+        ;
 }
 
 export default Nav;

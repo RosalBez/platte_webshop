@@ -1,24 +1,58 @@
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    font-family: 'Cabin Condensed', sans-serif;
+    /*background-color: #F5E4DA;*/
+}
+
+h1, h2 {
+    font-family: 'Amiko', sans-serif;
+}
+
+h3, h4, h5, h6, p, ul, li {
+    font-family: 'Amaranth', sans-serif;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+img {
     width: 100%;
-    height: 100%;
-    background: rgba(246, 128, 55, 0.15);
+}
+
+.outer-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+
 
 }
 
-#root {
-    width: 100%;
-    height: 100%;
-}
-
-.container {
+.inner-content-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding: 5px;
+    justify-content: center;
+    /*!*flex-basis: 1200px;*!*/
+    /*flex-shrink: 1;*/
+    /*flex-grow: 0;*/
+    /*margin: 0 20px;*/
 }
 
-footer {
-    margin-top: auto;
-}
+
+
+

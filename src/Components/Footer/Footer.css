@@ -3,11 +3,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100%;
+    width: 100vw;
     background-color: rgba(194, 184, 237, 0.35);
     flex-grow: 0;
     flex-shrink: 0;
     padding: 20px 10px 10px 10px;
+    position: inherit;
 
 }
 
@@ -26,17 +27,17 @@
   }
 
 .insta-footer {
-    width: 30px;
-    height: 38px;
+    width: 3vw;
+    height: 5vh;
     margin: 0px 10px 0px 10px;
 
 
 }
 
 .logo-footer {
-    width: 140px;
-    height: 180px;
-    margin-left: 80px;
+    width: 9vw;
+    height: 21vh;
+    margin-right: 40px;
 
 
 }

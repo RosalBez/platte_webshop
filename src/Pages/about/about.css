@@ -1,0 +1,98 @@
+/******* algemeen *****/
+.outer-container-about {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inner-container-about {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px 0px 0px;
+
+}
+
+/******* about *************/
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 1;
+    flex-grow: 0;
+    width: 30vw;
+    text-align: left;
+    gap: 10px;
+
+}
+
+.about-card > p {
+    width: 20vw;
+
+}
+
+.about-card > p > div {
+    margin-top: 10px;
+
+}
+
+.about-card > p > img {
+    width: 8vw;
+    height: 20vh;
+    transform: matrix(1, -0.75, 0.75, 1, 10, -40);
+    margin-top: 5px;
+
+}
+
+.about-laying-girl {
+    width: 31vw;
+    height: 75vh;
+    margin-bottom: 150px;
+
+}
+
+
+
+
+
+/************contact*******************/
+.inner-container-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 100px 0px 0px;
+
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-shrink: 1;
+    flex-grow: 0;
+    width: 30vw;
+    text-align: left;
+    gap: 10px;
+
+}
+
+.contact-girl {
+    width: 25vw;
+    height: 75vh;
+    margin-bottom: 150px;
+
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 0;
+
+}

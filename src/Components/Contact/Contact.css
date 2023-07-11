@@ -1,0 +1,40 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    text-transform: uppercase;
+
+
+}
+
+.label-input {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    align-items: stretch;
+
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+
+
+
+
