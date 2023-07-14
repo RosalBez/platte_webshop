@@ -1,6 +1,6 @@
 nav ul a,
 nav ul a:visited{
-    color:darkmagenta;
+
     text-decoration: none;
 }
 
@@ -9,7 +9,7 @@ nav ul a:visited{
 }
 
 .active-link {
-    border-bottom: 1px solid darkmagenta;
+    border-bottom: 1px solid #261397;
 }
 
 .navigation {
@@ -17,13 +17,11 @@ nav ul a:visited{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    height: 5vh;
-    padding-top: 38px;
-    padding-bottom: 30px;
+    width: 100%;
     background-color: transparent;
     flex-grow: 0;
     flex-shrink: 1;
+    margin-bottom: 20px;
 
 
 }
@@ -31,8 +29,7 @@ nav ul a:visited{
 .left-side-nav > ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     list-style: none;
 
 
@@ -42,30 +39,31 @@ nav ul a:visited{
 .right-side-nav > ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     list-style: none;
 
 
 }
 .profile {
-    width: 30px;
-    height: 38px;
-    margin: 0px 10px 0px 10px;
+    width: 2vw;
+    height: 6vh;
+    margin-left: 30px;
 
 }
 
 .basket {
-    width: 35px;
-    height: 40px;
-    margin: 0px 10px 0px 10px;
+    width: 2vw;
+    height: 6vh;
+    margin: 10px 20px 0px 20px;
+    padding-top: 10px;
+
 
 }
 
 .shop{
     width: 50px;
     height: 30px;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 40px 0px 10px;
 }
 
 .logo {

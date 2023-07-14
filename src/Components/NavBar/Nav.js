@@ -6,12 +6,13 @@ import logo from '../../assets/Specifics/LOGO NAVBAR.svg'
 import profile from '../../assets/Specifics/noun-person-2209440 1.svg'
 import basket from '../../assets/Specifics/noun-basket-1131344 1.svg'
 import about from '../../assets/Specifics/over.svg'
-import shop from '../../assets/Specifics/shop.svg'
+// import shop from '../../assets/Specifics/shop.svg'
+import DropdownMenu from "./dropdownmenu/DropdownNavItem";
 
 function Nav(props) {
     return (
 
-            <nav className="outer-content-container navigation">
+            <nav className="navigation">
                 <div className='left-side-nav'>
                     <ul>
                         <li>
@@ -31,12 +32,8 @@ function Nav(props) {
 
                 <div className='right-side-nav'>
                     <ul>
-                        <li>
-                            <NavLink to='/products'
-                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                                <img src={shop} alt='shop' className='shop'/>
-                            </NavLink>
-                        </li>
+                        <DropdownMenu/>
+
                         <li><SearchBar/></li>
                         <li>
                             <NavLink to='/register_sign_in'

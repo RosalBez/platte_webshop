@@ -1,6 +1,5 @@
-.searchbar {
-    margin: 0 0 16px 0;
-
+input {
+    margin-bottom: 10px;
 }
 
 .searchbar  {
@@ -9,10 +8,10 @@
     background-color: #C2B8ED;
     border: none;
     border-radius: 25px;
-    width: 200px;
-    height: 40px;
-    outline: none;
-    margin-top: 20px;
+    width: 15vw;
+    height: 4vh;
+
+
 
 }
 

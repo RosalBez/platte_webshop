@@ -13,14 +13,14 @@ function Home() {
         <>
 
             <main>
-                    <header className='header-content'>
+                    <header className='inner-content-container header-content'>
                         <img src={head} alt='girl with sunglasses' className="header-image"/>
                         <NavLink to='/products'>
                             <Button className='header-button' title="Shop nu"/>
                         </NavLink>
                     </header>
 
-                    <div>
+                    <div className='inner-content-container'>
                     <span className='login'>
                         <img src={login} alt='laying girl with sunglasses' className='login-picture'/>
                         <img src={signature} alt='signature' className='login-signature'/>

@@ -43,7 +43,7 @@
     flex-shrink: 1;
     margin-top: 160px;
     gap: 70px;
-    border: solid red 4px;
+
 }
 
 .login-picture {
@@ -57,16 +57,16 @@
 .login-signature {
     width: 15vw;
     position: absolute;
-    top: 130%;
-    left: 40%;
+    top: 117%;
+    left: 42%;
     transform: translate(-50%, -50%);
 }
 
 .login-button {
     width: 15vw;
     position: absolute;
-    top: 137%;
-    left: 46%;
+    top: 124%;
+    left: 48%;
     transform: translate(-50%, -50%);
     background-color: transparent;
     color: #F68037;
@@ -95,8 +95,8 @@
     width: 15vw;
     height: 5vh;
     position: absolute;
-    top: 175%;
-    left: 63%;
+    top: 165%;
+    left: 65%;
     margin-top: 20px;
 
     background-color: #C2B8ED;
