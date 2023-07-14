@@ -16,15 +16,11 @@ function Nav(props) {
                 <div className='left-side-nav'>
                     <ul>
                         <li>
-                            <NavLink to="/"
-                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                                <img src={logo} alt='logo' className='logo'/>
+                            <NavLink to="/" ><img src={logo} alt='logo' className='logo'/>
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/about'
-                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
-                                <img src={about} alt='about' className='about'/>
+                            <NavLink to='/about'> <img src={about} alt='about' className='about'/>
                             </NavLink>
                         </li>
                     </ul>
@@ -36,14 +32,12 @@ function Nav(props) {
 
                         <li><SearchBar/></li>
                         <li>
-                            <NavLink to='/register_sign_in'
-                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
+                            <NavLink to='/RegisterSignIn'>
                                 <img src={profile} alt='profile' className='profile'/>
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/shoppingcart'
-                                     className={({isActive}) => isActive === true ? 'active-link' : 'default-link'}>
+                            <NavLink to='/shoppingcart'>
                                 <img src={basket} alt='basket' className='basket'/>
                             </NavLink>
                         </li>

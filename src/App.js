@@ -11,6 +11,9 @@ import Shoppingcart from "./Pages/Shoppingcart/Shoppingcart";
 import RegisterSignIn from "./Pages/Register-sign-in/Register_sign_in";
 import NotFound from "./Components/NotFound/NotFound";
 import FAQS from "./Pages/FAQS/FAQS"
+import Armbanden from "./Pages/ProductPage/Armbanden/Armbanden";
+import Kettingen from "./Pages/ProductPage/Kettingen/Kettingen";
+import Brilkoorden from "./Pages/ProductPage/Brilkoorden/Brilkoorden";
 
 function App() {
     return (
@@ -22,6 +25,10 @@ function App() {
                 <Route path='/' element={<Home/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/products' element={<Products/>}/>
+                <Route path='/Armbanden' element={<Armbanden/>}/>
+                <Route path='/Kettingen' element={<Kettingen/>}/>
+                <Route path='/Brilkoorden' element={<Brilkoorden/>}/>
+
                 {/*<Route path='/product-page/:id' element={<ProductPage/>}*/}
                 <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
                 <Route path='/shoppingcart' element={<Shoppingcart/>}/>

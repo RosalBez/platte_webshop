@@ -9,8 +9,8 @@ import Contact from "../../Components/Contact/Contact";
 
 function About() {
     return (
-        <div className='outer-container-about'>
-            <div className='inner-container-about'>
+        <div className='inner-content-container'>
+            <section className='about-text'>
                 <img src={layingGirl} alt='laying girl' className='about-laying-girl'/>
                 <Card title='Over RSL' className='about-card'>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque enim eos maiores natus
@@ -29,18 +29,19 @@ function About() {
                         <div> xxx RSL </div>
                         <img src={aboutSignature} alt='signature'/>
 
-                    </p> </Card>
-
-            </div>
-
-            <div className='inner-container-contact'>
-                <img src={contactGirl} alt='contact girl' className='contact-girl'/>
-                <Card title='Contact' className='contact-card'>
-                    <Contact/>
+                    </p>
                 </Card>
 
+            </section>
 
-            </div>
+                <section className='contact-section'>
+                    <img src={contactGirl} alt='contact girl' className='contact-girl'/>
+                    <Card title='Contact' className='contact-card'>
+                        <Contact/>
+                    </Card>
+                </section>
+
+
 
         </div>
     );

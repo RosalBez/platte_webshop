@@ -1,20 +1,26 @@
 /******* algemeen *****/
-.outer-container-about {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.inner-container-about {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    margin: 100px 0px 0px 0px;
-
-}
 
 /******* about *************/
+
+.about-text {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.about-laying-girl {
+    width: 31vw;
+    height: 75vh;
+    margin-bottom: 150px;
+    border: 2px solid #C2B8ED;
+    padding: 8px;
+    border-radius: 25px 0px;
+
+}
+
 
 .about-card {
     display: flex;
@@ -29,16 +35,15 @@
 
 }
 
-.about-card > p {
-    width: 20vw;
-    color: #F68037;
-
-}
-
 .about-card > h2 {
     color: #261397;
     text-transform: uppercase;
     font-weight: lighter;
+}
+.about-card > p {
+    width: 20vw;
+    color: #F68037;
+
 }
 
 .about-card > p > div {
@@ -54,63 +59,45 @@
 
 }
 
-.about-laying-girl {
-    width: 31vw;
-    height: 75vh;
-    margin-bottom: 150px;
-    border: 2px solid #C2B8ED;
-    padding: 8px;
-    border-radius: 25px 0px;
-
-
-
-}
-
-
-
-
 
 /************contact*******************/
-.inner-container-contact {
+.contact-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 10px 100px 0px 0px;
-
-}
-.contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-shrink: 1;
-    flex-grow: 0;
-    width: 30vw;
-    text-align: left;
-    gap: 10px;
+    margin-top: 40px;
+    padding-right: 65px;
+    /*padding-left: 150px;*/
+    gap: 100px;
 
 }
 
 .contact-girl {
     width: 25vw;
     height: 75vh;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
     border: 2px solid #F68037;
     padding: 8px;
     border-radius: 0px 25px;
 
-
 }
+
+
 
 .contact-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     flex-shrink: 1;
     flex-grow: 0;
     color: #261397;
+    margin-bottom: 250px;
+    width: 30vw;
+    text-align: left;
+    gap: 15px;
+
+
 
 }
 
@@ -118,4 +105,5 @@
     color: #F68037;
     text-transform: uppercase;
     font-weight: lighter;
+    padding-left: 55px;
 }

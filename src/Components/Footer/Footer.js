@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import Newsletter from "../Newsletter/Newsletter"
 import './Footer.css'
-import insta from '../../assets/Specifics/noun-instagram-4849189 1.svg'
+import insta from '../../assets/Specifics/noun-camera-5053228.png'
 import footerLogo from "../../assets/Specifics/LOGO NAV.png";
 
 

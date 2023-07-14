@@ -1,4 +1,7 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
+
+
 
 function Products(props) {
     return (
@@ -6,12 +9,19 @@ function Products(props) {
             <div className='outer-content-container'>
                 <div className='inner-content-container'>
                     <h1> Producten</h1>
-                    <p> Alle producten vind je hier</p>
-                    <ul>
-                        <li><a href='product/1'>Product 1</a></li>
-                        <li><a href='product/2'>Product 2</a></li>
-                        <li><a href='product/3'>Product 3</a></li>
-                    </ul>
+                    <p>  <strong> Alle producten </strong> vind je hier , als je op een foto klikt kom je op de details van het product als je op een titel druk kom je op de pagina met een overzicht van al de spullen binnen die categorie</p>
+
+                    <NavLink to='/Armbanden'>
+                        <p>Armbanden</p>
+                    </NavLink>
+                    <NavLink to='/Kettingen'>
+                        <p>Kettingen</p>
+                    </NavLink>
+                    <NavLink to='/Brilkoorden'>
+                        <p>Brilkoorden</p>
+                    </NavLink>
+
+
 
                 </div>
 

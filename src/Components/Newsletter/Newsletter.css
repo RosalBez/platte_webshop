@@ -1,12 +1,17 @@
+/*********default************/
+
 
 .email-form {
     width: 500px;
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
     background-color: rgba(194, 184, 237, 0.5);
     border: 1px;
     border-radius: 15px;
 
+
 }
+
+/***********fill in******************/
 
 .newsletter-name {
     color: #261397;
@@ -30,10 +35,12 @@ input {
     padding: 5px;
     width: 300px;
     outline: none;
+    margin-left: 14px;
 }
 
 input::placeholder{
     color: #261397;
+
 }
 
 button {

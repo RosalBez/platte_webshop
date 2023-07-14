@@ -1,16 +1,4 @@
-nav ul a,
-nav ul a:visited{
-
-    text-decoration: none;
-}
-
-.default-link {
-    border-bottom: 1px solid transparent;
-}
-
-.active-link {
-    border-bottom: 1px solid #261397;
-}
+/*********default**********/
 
 .navigation {
     display: flex;
@@ -21,10 +9,11 @@ nav ul a:visited{
     background-color: transparent;
     flex-grow: 0;
     flex-shrink: 1;
-    margin-bottom: 20px;
-
+    padding: 20px 0px 20px 0;
 
 }
+
+/*********left side***********/
 
 .left-side-nav > ul {
     display: flex;
@@ -32,52 +21,51 @@ nav ul a:visited{
     align-items: flex-end;
     list-style: none;
 
+}
+
+.logo {
+    height: 40px;
+}
+
+.about {
+    width: 50px;
+    height: 20px;
+    margin-left: 15px;
 
 
 }
+/*********right side************/
 
 .right-side-nav > ul {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     list-style: none;
-
-
-}
-.profile {
-    width: 2vw;
-    height: 6vh;
-    margin-left: 30px;
-
-}
-
-.basket {
-    width: 2vw;
-    height: 6vh;
-    margin: 10px 20px 0px 20px;
-    padding-top: 10px;
-
-
+    margin-right: 20px;
 }
 
 .shop{
     width: 50px;
     height: 30px;
-    margin: 0px 40px 0px 10px;
-}
-
-.logo {
-    width: 30px;
-    height: 40px;
-    margin: 0px 10px 0px 0px;
-
 
 }
 
-.about {
-    width: 50px;
-    height: 20px;
-    margin: 0px 7px 0px 7px;
+.profile {
+    width: 53px;
+    height: 32px;
+    margin-right: 0;
 
 }
+
+.basket {
+    width: 53px;
+    height: 32px;
+    margin-left: 0;
+
+}
+
+
+
+
+
 
