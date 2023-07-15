@@ -1,0 +1,28 @@
+.product-overview-armbanden {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.product-card-armbanden {
+    list-style: none;
+    padding: 100px;
+}
+
+.go-back-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 20px;
+    color: #C2B8ED;
+}
+
+.link {
+    color: #C2B8ED;
+}
+
+.link:hover{
+    color: #F68037;
+}

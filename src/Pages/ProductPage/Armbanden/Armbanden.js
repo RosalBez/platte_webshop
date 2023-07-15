@@ -1,22 +1,72 @@
-import React from 'react';
-
-import {Link, NavLink} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
+import {Link, } from "react-router-dom";
 import './Armbanden.css'
 
-function Armbanden() {
+const Armbanden = () => {
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false);
+    const [data, setData] = useState([]);
 
-/********let op!! navlink naar product ID = Vul het ID nummer/naam in acher ProductDetailsArmbenden/XXXX, anders komt er ID in je beeldscherm te staan!****/
+    useEffect(() => {
+        const controller = new AbortController();
+
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                setError(false);
+                const response = await axios.get('https://fakestoreapi.com/products/category/jewelery', {
+                    signal: controller.signal,
+                });
+                setData(response.data);
+            } catch (e) {
+                // console.error( e )
+                setError(true)
+
+                if (axios.isCancel(e)) {
+                    console.log('The axios request was cancelled')
+                } else {
+                    console.error(e)
+                }
+            }
+            setLoading(false);
+        }
+        fetchData()
+
+        return function cleanup() {
+            controller.abort();
+        }
+    }, [])
+
+    /********let op!! navlink naar product ID = Vul het ID nummer/naam in acher ProductDetailsArmbenden/XXXX, anders komt er ID in je beeldscherm te staan!****/
     return (
-        <div className='outer-content-container'>
-            <div className='inner-content-container'>
-                <h4> hier komt een overzicht van ALLE armbanden</h4>
-                <NavLink to='../ProductDetailsArmbanden/1' className='armbanden'>
-                    <p>Armband 1</p></NavLink>
+        <>
+            {loading && <p>Loading...</p>}
+            {error && <p>Error: Could not fetch data!</p>}
 
-                <p><Link to='../../Products'> Ga terug</Link> naar het overzicht.</p>
+
+            <div className='inner-content-container'>
+                <h1> Armbanden</h1>
+                <ul className="product-overview-armbanden">
+                    {data.map(product => {
+                        return (
+                            <li className="product-card-armbanden" key={product.id}>
+                                <Link to={`/products/${product.id}`}>
+                                    <div className='product-details'>
+                                        <img src={product.image} alt={product.title}/>
+                                        <h4>{product.title.slice(0, 25)} €{product.price}</h4>
+
+                                    </div>
+                                </Link>
+                            </li>
+                        )
+                    })}
+                </ul>
+
 
             </div>
-        </div>
+            <p className='go-back-link'><Link to='../../Products' className='link'> Ga terug</Link> naar het overzicht.</p>
+        </>
 
 
     );
