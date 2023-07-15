@@ -14,6 +14,9 @@ import FAQS from "./Pages/FAQS/FAQS"
 import Armbanden from "./Pages/ProductPage/Armbanden/Armbanden";
 import Kettingen from "./Pages/ProductPage/Kettingen/Kettingen";
 import Brilkoorden from "./Pages/ProductPage/Brilkoorden/Brilkoorden";
+import ProductDetailsArmbanden from './Pages/ProductPage/Armbanden/ProductDetailsArmbanden/ProductDetailsArmbanden'
+import ProductDetailsKettingen from './Pages/ProductPage/Kettingen/ProductDetailsKettingen/ProductDetailsKettingen'
+import ProductDetailsBrilkoorden from './Pages/ProductPage/Brilkoorden/ProductDetailsBrilkoorden/ProductDetailsBrilkoorden'
 
 function App() {
     return (
@@ -26,10 +29,11 @@ function App() {
                 <Route path='/about' element={<About/>}/>
                 <Route path='/products' element={<Products/>}/>
                 <Route path='/Armbanden' element={<Armbanden/>}/>
+                <Route path='/productDetailsArmbanden/:id' element={<ProductDetailsArmbanden/>}/>
                 <Route path='/Kettingen' element={<Kettingen/>}/>
+                <Route path='/productDetailsKettingen/:id' element={<ProductDetailsKettingen/>}/>
                 <Route path='/Brilkoorden' element={<Brilkoorden/>}/>
-
-                {/*<Route path='/product-page/:id' element={<ProductPage/>}*/}
+                <Route path='/productDetailsBrilkoorden/:id' element={<ProductDetailsBrilkoorden/>}/>
                 <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
                 <Route path='/shoppingcart' element={<Shoppingcart/>}/>
                 <Route path='/FAQS' element={<FAQS/>}/>
