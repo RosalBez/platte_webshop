@@ -1,19 +1,14 @@
 import React from 'react';
-import {Link, NavLink, useParams} from "react-router-dom";
-import './Kettingen.css'
+import {NavLink} from "react-router-dom";
+import Product from "../../../Components/Product/Product";
+import Photo1 from '../../../assets/photos/photo1.jpg';
 
-function Kettingen  (props) {
-
-
+function Kettingen(props) {
     return (
-        <div className='outer-content-container'>
-            <div className='inner-content-container'>
-                <h4> hier komt een overzicht van ALLE kettingen</h4>
-                <NavLink to='../ProductDetailsKettingen/1' className='kettingen'>
-                    <p>Ketting 1</p></NavLink>
-                <p><Link to='../../Products'> Ga terug</Link> naar het overzicht.</p>
-            </div>
-        </div>
+        <>
+            <Product title='Kettingen' image={Photo1}></Product>
+            <p className='nav-link'> <NavLink to='/products' className='go-back'>Ga terug </NavLink> naar het overzicht </p>
+        </>
 
     );
 }

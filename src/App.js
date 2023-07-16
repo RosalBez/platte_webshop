@@ -6,7 +6,7 @@ import Nav from "./Components/NavBar/Nav";
 import Home from './Pages/home/Home';
 import Footer from "./Components/Footer/Footer"
 import About from "./Pages/about/about";
-import Products from "./Pages/Products/Products";
+import Products from "./Pages/ProductsOverview/ProductsOverview";
 import Shoppingcart from "./Pages/Shoppingcart/Shoppingcart";
 import RegisterSignIn from "./Pages/Register-sign-in/Register_sign_in";
 import NotFound from "./Components/NotFound/NotFound";

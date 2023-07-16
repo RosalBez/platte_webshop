@@ -1,0 +1,14 @@
+.nav-link {
+    text-align: right;
+    color: #C2B8ED;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.go-back {
+    color:#C2B8ED;
+
+}
+.go-back:hover {
+    color: #F68037;
+}
