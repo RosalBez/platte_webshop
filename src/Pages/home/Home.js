@@ -12,7 +12,7 @@ function Home() {
     return (
         <>
 
-            <main>
+            <main className='main-container'>
                     <header className='inner-content-container header-content'>
                         <img src={head} alt='girl with sunglasses' className="header-image"/>
                         <NavLink to='/products'>
@@ -36,7 +36,7 @@ function Home() {
                                 culpa qui officia deserunt mollit anim id est laborum."
                             </p>
 
-                            <NavLink to='/register-sign-in'>
+                            <NavLink to='/RegisterSignIn'>
                                 <Button className='register-button' title='Registreer nu'/>
                             </NavLink>
                         </Card>

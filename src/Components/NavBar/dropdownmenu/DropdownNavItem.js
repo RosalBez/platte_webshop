@@ -48,13 +48,13 @@ const DropdownMenu = () => {
             {isOpen && (
                 <ul className="dropdown-menu" onMouseLeave={handleMouseLeave}>
                     <li onClick={() => handleItemClick("Armbanden")}>
-                        <Link to='/products'>Armbanden</Link>
+                        <Link to='/Armbanden'>Armbanden</Link>
                     </li>
                     <li onClick={() => handleItemClick("Kettingen")}>
-                        <Link to='/products'>Kettingen</Link>
+                        <Link to='/Kettingen'>Kettingen</Link>
                     </li>
                     <li onClick={() => handleItemClick("Brilkoorden")}>
-                        <Link to='/products'>Brilkoorden</Link>
+                        <Link to='/Brilkoorden'>Brilkoorden</Link>
                     </li>
                 </ul>
             )}

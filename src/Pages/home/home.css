@@ -1,8 +1,8 @@
 /******default*******/
-
+.main-container {
+    width: 95vw;
+}
 /*////////////header//////////////*/
-
-/**********************shop button************/
 
 
 .header-button {
@@ -38,7 +38,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     flex-grow: 0;
     flex-shrink: 1;
     margin-top: 160px;
@@ -57,16 +57,16 @@
 .login-signature {
     width: 15vw;
     position: absolute;
-    top: 117%;
-    left: 42%;
+    top: 112%;
+    left: 36%;
     transform: translate(-50%, -50%);
 }
 
 .login-button {
     width: 15vw;
     position: absolute;
-    top: 124%;
-    left: 48%;
+    top: 119%;
+    left: 44%;
     transform: translate(-50%, -50%);
     background-color: transparent;
     color: #F68037;
@@ -83,6 +83,7 @@
 .login-text {
     width: 30vw;
     text-align: center;
+    margin-top: -100px;
 
 }
 
@@ -94,17 +95,17 @@
 .register-button {
     width: 15vw;
     height: 5vh;
-    position: absolute;
+    /*position: absolute;*/
     top: 165%;
     left: 65%;
-    margin-top: 20px;
-
     background-color: #C2B8ED;
     color: #261397;
     border: none;
     border-radius: 25px;
     font-size: 16px;
     text-transform: uppercase;
+    margin-top: 20px;
+
 }
 /********nieuw section***********/
 

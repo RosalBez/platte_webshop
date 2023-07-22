@@ -1,11 +1,17 @@
 import React from 'react';
-import {useParams} from "react-router-dom";
+import Product from "../../../Components/Product/Product";
+import './Armbanden.css'
+import Photo2 from '../../../assets/photos/photo2.jpg';
+import {NavLink} from "react-router-dom";
+
 
 function Armbanden(props) {
-    const {id} = useParams()
-
     return (
-        <div></div>
+        <>
+            <Product title='Armbanden' image={Photo2}></Product>
+            <p className='nav-link'> <NavLink to='/products' className='go-back'>Ga terug </NavLink> naar het overzicht </p>
+        </>
+
     );
 }
 

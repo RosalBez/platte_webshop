@@ -1,44 +1,47 @@
+/*********default*************/
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100vw;
+    width: 100%;
     background-color: rgba(194, 184, 237, 0.35);
     flex-grow: 0;
-    flex-shrink: 0;
+    flex-shrink: 1;
     padding: 20px 10px 10px 10px;
-
 
 }
 
+/****************left side*****************/
 .left-side-footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    padding-top: 200px;
+    padding-top: 180px;
 }
 
+.insta-footer {
+    width: 1.8vw;
+    height: 3vh;
+    margin: 10px 10px 0px 10px;
+
+
+}
+
+
+/*********right side****************/
 .right-side-footer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
 
-.insta-footer {
-    width: 3vw;
-    height: 5vh;
-    margin: 0px 10px 0px 10px;
-
-
-}
 
 .logo-footer {
     width: 9vw;
     height: 21vh;
     margin-right: 40px;
-
 
 }
 
