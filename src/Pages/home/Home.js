@@ -6,6 +6,8 @@ import './home.css';
 import {NavLink} from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
+import NewProducts from "../../Components/NewProduct/NewProducts";
+import Photo3 from "../../assets/photos/Photo3.jpg"
 
 
 function Home() {
@@ -43,9 +45,8 @@ function Home() {
                     </span>
                     </div>
 
-                    <Card className='inner-content-container new-section' title='Nieuw'>
-                        <p> hier komen plaatjes </p>
-                    </Card>
+                    <NewProducts image={Photo3}/>
+
             </main>
         </>
 

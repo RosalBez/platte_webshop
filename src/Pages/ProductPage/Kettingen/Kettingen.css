@@ -12,3 +12,11 @@
 .go-back:hover {
     color: #F68037;
 }
+
+.go-back-arrow {
+    position: absolute;
+    width: 3vw;
+    height: 5vh;
+    top: 20%;
+    left: 2%;
+}

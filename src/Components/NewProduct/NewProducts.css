@@ -1,0 +1,44 @@
+.new-homepage {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: initial;
+    color: #C2B8ED;
+    margin-top: 160px;
+}
+
+.new-homepage :hover {
+    color: #F68037;
+}
+
+.product-overview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+}
+
+.product-card {
+    list-style: none;
+    margin: 40px;
+}
+
+.product-details > img {
+    width: 180px;
+    height: 250px;
+    border-radius: 25px;
+}
+
+.product-title {
+    color: #261397;
+    text-decoration: none ;
+    text-align: center;
+    font-weight: initial;
+}
+
+.product-title:hover {
+    color: #F68037;
+    text-decoration: underline;
+}
