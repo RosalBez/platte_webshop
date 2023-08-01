@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {useParams} from "react-router-dom";
-import './ProductDetailsKettingen.css'
+import './ProductDetails.css'
 
-const ProductDetailsKettingen = () => {
+const ProductDetails = () => {
 
     const {id} = useParams()
 
@@ -12,13 +12,14 @@ const ProductDetailsKettingen = () => {
             <div className='outer-content-container'>
                 <div className='inner-content-container'>
                     <h1> ProductPage { id }</h1>
-                    <p> dit is de pagina met de product details van <strong> ketting { id } </strong></p>
-                    <p><Link to='../../Kettingen'> Ga terug</Link> naar het overzicht.</p>
+                    <p> dit is de pagina met de product details van <strong> brilkoord { id } </strong></p>
+                    <p><Link to='/products'> Ga terug</Link> naar het overzicht.</p>
                 </div>
             </div>
+
         </>
 
     );
 }
 
-export default ProductDetailsKettingen;
+export default ProductDetails;

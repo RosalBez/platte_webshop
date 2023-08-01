@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
 import NewProducts from "../../Components/NewProduct/NewProducts";
-import Photo3 from "../../assets/photos/Photo3.jpg"
+import Photo3 from "../../assets/photos/photo3.jpg"
 
 
 function Home() {
@@ -45,7 +45,7 @@ function Home() {
                     </span>
                     </div>
 
-                    <NewProducts image={Photo3}/>
+                    <NewProducts/>
 
             </main>
         </>

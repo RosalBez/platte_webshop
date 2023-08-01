@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './NewProducts.css';
-import {Link, NavLink} from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { importedImages} from "../Product/Product";
 
-const NewProducts = (props) => {
+const NewProducts = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [newestProducts, setNewestProducts] = useState([]);
@@ -40,16 +41,22 @@ const NewProducts = (props) => {
             <div className="inner-content-container">
                 <Link to='./products' className='new-homepage'><h1>NIEUW</h1></Link>
                 <ul className="product-overview">
-                    {newestProducts.map((product) => (
-                        <li className="product-card" key={product.id}>
-                            <div className="product-details">
-                                <img src={props.image} alt={product.title} />
-                                <h4 className="product-title">
-                                    {product.title.slice(0, 11)} €{product.price}
-                                </h4>
-                            </div>
-                        </li>
-                    ))}
+                    {newestProducts.map((product, index) => {
+                        // Kies de afbeelding op basis van het huidige productindex
+                        const imageIndex = index % importedImages.length;
+                        const imageSrc = importedImages[imageIndex];
+
+                        return (
+                            <li className="product-card" key={product.id}>
+                                <div className="product-details">
+                                    <img src={imageSrc} alt={product.title} />
+                                    <h4 className="product-title">
+                                        {product.title.slice(0, 11)} €{product.price}
+                                    </h4>
+                                </div>
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </>
