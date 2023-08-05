@@ -1,0 +1,55 @@
+.title-register {
+    text-align: end;
+    margin-bottom: 25px;
+
+
+}
+.register-form {
+    display: flex;
+    flex-direction: column;
+    border: solid #C2B8ED 2px;
+    width: 40vw;
+    margin: 20px 0px 70px 20px;
+
+    padding: 10px 30px 14px 20px;
+    gap: 10px;
+
+}
+
+.register-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #261397;
+    text-transform: lowercase;
+    font-weight: bold;
+    gap: 50px;
+
+}
+
+.register-input {
+    background-color: transparent;
+    border: 2px solid #C2B8ED;
+
+}
+
+.register-button-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+
+.register-button-two > button {
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 170px;
+    height: 38px;
+    border-radius: 25px;
+    margin-left: 55px;
+
+}
+

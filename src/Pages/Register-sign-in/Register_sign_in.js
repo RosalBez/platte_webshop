@@ -1,12 +1,15 @@
 import React from 'react';
+import './Register_sign_in.css'
+import Register from "../../Components/Register/Register";
+import LogIn from "../../Components/Log In/LogIn";
 
-function Register_sign_in(props) {
+function RegisterSignIn(props) {
     return (
-        <div>
-            <h2> Log In of Registreer</h2>
-            <p> Log in om te betalen</p>
+        <div className='login-en-registreer'>
+            <Register/>
+            <LogIn/>
         </div>
     );
 }
 
-export default Register_sign_in;
+export default RegisterSignIn;

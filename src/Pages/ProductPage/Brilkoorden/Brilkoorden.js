@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, NavLink} from "react-router-dom";
 import './Brilkoorden.css'
 import Product from "../../../Components/Product/Product";
-import Arrow1 from "../../../assets/photos/Arrow1.jpg";
+import Arrow1 from '../../../assets/photos/Arrow1.png'
 
 function Brilkoorden() {
     return (

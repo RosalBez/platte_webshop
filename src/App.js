@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // import axios from "axios";
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Navigate} from 'react-router-dom'
 import Nav from "./Components/NavBar/Nav";
 import Home from './Pages/home/Home';
 import Footer from "./Components/Footer/Footer"
@@ -14,8 +14,12 @@ import FAQS from "./Pages/FAQS/FAQS"
 import Armbanden from "./Pages/ProductPage/Armbanden/Armbanden";
 import Kettingen from "./Pages/ProductPage/Kettingen/Kettingen";
 import Brilkoorden from "./Pages/ProductPage/Brilkoorden/Brilkoorden";
+import Profile from "./Pages/Register-sign-in/Profile/Profile";
+import Wensenlijst from "./Pages/Register-sign-in/Wensenlijst/Wensenlijst";
 
 function App() {
+
+
     return (
         <>
 
@@ -29,6 +33,8 @@ function App() {
                 <Route path='/Kettingen' element={<Kettingen/>}/>
                 <Route path='/Brilkoorden' element={<Brilkoorden/>}/>
                 <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
+                <Route path='/Profile' element={ <Profile/>}/>
+                <Route path='/Wensenlijst' element={<Wensenlijst/>}/>
                 <Route path='/shoppingcart' element={<Shoppingcart/>}/>
                 <Route path='/FAQS' element={<FAQS/>}/>
                 <Route path='*' element={<NotFound/>}/>

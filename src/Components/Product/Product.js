@@ -12,8 +12,11 @@ import photo7 from '../../assets/photos/photo 7.jpg';
 import photo8 from '../../assets/photos/photo 8.jpg';
 import photo9 from '../../assets/photos/photo 9.jpg';
 import photo10 from '../../assets/photos/photo10.jpg'
+import photo11 from '../../assets/photos/photo11.jpg'
+import photo12 from '../../assets/photos/photo12.jpg'
 
-// Array van geïmporteerde afbeeldings-URL's
+
+// Array van geïmporteerde productafbeeldingen//
 export const importedImages = [
     photo1,
     photo2,
@@ -25,6 +28,9 @@ export const importedImages = [
     photo8,
     photo9,
     photo10,
+    photo11,
+    photo12,
+
 ];
 const Product = (props) => {
     const [loading, setLoading] = useState(false);
