@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './App.css';
 // import axios from "axios";
 import {Routes, Route, Navigate} from 'react-router-dom'
@@ -14,11 +14,13 @@ import FAQS from "./Pages/FAQS/FAQS"
 import Armbanden from "./Pages/ProductPage/Armbanden/Armbanden";
 import Kettingen from "./Pages/ProductPage/Kettingen/Kettingen";
 import Brilkoorden from "./Pages/ProductPage/Brilkoorden/Brilkoorden";
-import Profile from "./Pages/Register-sign-in/Profile/Profile";
+import Profiel from "./Pages/Register-sign-in/Profiel/Profiel";
 import Wensenlijst from "./Pages/Register-sign-in/Wensenlijst/Wensenlijst";
+import {AuthenticationContext} from "./context/AuthenticationProvider/AuthenticationContext";
 
 function App() {
-
+    const {isAuth, login, logout} = useContext(AuthenticationContext)
+    console.log(isAuth)
 
     return (
         <>
@@ -33,8 +35,9 @@ function App() {
                 <Route path='/Kettingen' element={<Kettingen/>}/>
                 <Route path='/Brilkoorden' element={<Brilkoorden/>}/>
                 <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
-                <Route path='/Profile' element={ <Profile/>}/>
-                <Route path='/Wensenlijst' element={<Wensenlijst/>}/>
+
+                <Route path='/Profiel' element={ isAuth ? <Profiel/> : <Navigate/>}/>
+                <Route path='/Wensenlijst' element={ isAuth ? <Wensenlijst/> : <Navigate/>}/>
                 <Route path='/shoppingcart' element={<Shoppingcart/>}/>
                 <Route path='/FAQS' element={<FAQS/>}/>
                 <Route path='*' element={<NotFound/>}/>

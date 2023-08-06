@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {NavLink} from "react-router-dom";
 import './NavBar.css'
 import SearchBar from "../Searchbar/SearchBar";
@@ -8,8 +8,10 @@ import basket from '../../assets/Specifics/noun-basket-1131344 1.svg'
 import about from '../../assets/Specifics/over.svg'
 import shop from '../../assets/Specifics/shop.svg'
 import DropdownMenu from "./dropdownmenu/DropdownNavItem";
+import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
 
 function Nav(props) {
+    const {isAuth, login, logout} = useContext(AuthenticationContext)
     return (
 
             <nav className="navigation">
@@ -22,6 +24,9 @@ function Nav(props) {
                         <li>
                             <NavLink to='/about'> <img src={about} alt='about' className='about'/>
                             </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/RegisterSignIn' className='homepage_register_sign_in'>Registreer/Log In</NavLink>
                         </li>
                     </ul>
                 </div>
@@ -37,18 +42,25 @@ function Nav(props) {
 
                         <li><SearchBar/></li>
 
-                        <DropdownMenu
-                            menuLink='./RegisterSignIn'
-                            image={profile}
-                            title='profile'
-                            menuItems={['profiel', 'wensenlijst']}
-                            />
-
                         <li>
                             <NavLink to='/shoppingcart'>
                                 <img src={basket} alt='basket' className='basket'/>
                             </NavLink>
                         </li>
+
+                        {isAuth && (
+                            <li>
+                                <DropdownMenu
+                                    menulink='/Profiel'
+                                    image={profile}
+                                    title='Profiel'
+                                    menuItems={['Profiel', 'Wensenlijst']}
+                                    />
+                            </li>
+                        )}
+
+
+
                     </ul>
                 </div>
             </nav>

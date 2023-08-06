@@ -27,13 +27,25 @@
     height: 40px;
 }
 
+
+
 .about {
     width: 50px;
     height: 20px;
     margin-left: 15px;
 
-
 }
+
+.homepage_register_sign_in {
+    text-transform: uppercase;
+    color: #261397;
+}
+
+.homepage_register_sign_in:hover {
+    color: #F68037;
+    text-decoration: underline;
+}
+
 /*********right side************/
 
 .right-side-nav > ul {

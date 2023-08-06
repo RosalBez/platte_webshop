@@ -3,7 +3,8 @@ import React from 'react';
 function Wensenlijst(props) {
     return (
         <div>
-            <h2>Jouw wensen zijn</h2>
+            <h1>Jouw wensen</h1>
+            <p>wensenlijst</p>
         </div>
     );
 }
