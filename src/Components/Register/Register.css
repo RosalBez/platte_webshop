@@ -1,17 +1,27 @@
-.title-register {
-    text-align: end;
-    margin-bottom: 25px;
+/****algemen*******/
 
+.register-form-border {
+    border: solid #C2B8ED 2px;
+    padding: 10px 30px 14px 30px;
+    margin: 20px 0 60px 10px;
 
 }
-.register-form {
+
+.title-register {
+    text-align: end;
+    margin-bottom: 35px;
+    text-transform: lowercase;
+
+}
+
+/******1e gedeelte******/
+
+.register-form-first-part {
     display: flex;
     flex-direction: column;
-    border: solid #C2B8ED 2px;
-    width: 40vw;
+    flex-basis: auto;
+    width: 10vw;
     margin: 20px 0px 70px 20px;
-
-    padding: 10px 30px 14px 20px;
     gap: 10px;
 
 }
@@ -20,10 +30,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-basis: auto;
+    width: 40vw;
     color: #261397;
     text-transform: lowercase;
     font-weight: bold;
-    gap: 50px;
+    font-size: 18px;
+    gap: 80px;
 
 }
 
@@ -32,6 +45,55 @@
     border: 2px solid #C2B8ED;
 
 }
+
+/*******2e gedeelte*****/
+
+.register-form-second-part {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin: 40px 0px 70px 0;
+    gap: 20px;
+
+}
+
+.register-label-address {
+    color: #261397;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.register-form-second-part ::placeholder {
+    color: #C2B8ED;
+    text-transform: uppercase;
+}
+
+.register-input-address {
+    background-color: transparent;
+    border: 2px solid #C2B8ED;
+    width: 80vw;
+}
+
+.register-label-postcode {
+    display: flex;
+
+}
+
+.register-input-postcode{
+    background-color: transparent;
+    border: 2px solid #C2B8ED;
+}
+.register-input-housenumber {
+    background-color: transparent;
+    border: 2px solid #C2B8ED;
+    width: 10vw;
+}
+
+
+
+/****button******/
 
 .register-button-two {
     display: flex;
@@ -43,6 +105,8 @@
 }
 
 
+
+
 .register-button-two > button {
     text-transform: uppercase;
     font-size: 18px;
@@ -52,6 +116,7 @@
     margin-left: 55px;
 
 }
+
 
 .error-message-register {
     color: #F68037;
