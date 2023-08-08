@@ -56,23 +56,14 @@
     margin-right: 20px;
 }
 
-.shop{
-    width: 50px;
-    height: 30px;
 
-}
 
-.profile {
-    width: 53px;
-    height: 32px;
-    margin-right: 0;
-
-}
 
 .basket {
-    width: 53px;
-    height: 32px;
-    margin-left: 0;
+    width: 68px;
+    height: 38px;
+    padding-bottom: 1px;
+
 
 }
 

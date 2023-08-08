@@ -51,3 +51,12 @@
     margin-top: 10px;
 
 }
+
+.error-message-login {
+    text-align: right;
+    color: #F68037;
+    font-size: 14px;
+    font-style: italic;
+    /*margin-top: 10px;*/
+    /*margin-right: 180px;*/
+}

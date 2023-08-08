@@ -8,6 +8,14 @@
     cursor: pointer;
 }
 
+.image {
+    width: 68px;
+    height: 38px;
+    padding-bottom: 1px;
+
+}
+
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -22,6 +30,7 @@
 }
 
 .dropdown-menu li {
+    color: #261397;
     padding: 10px;
 
 }

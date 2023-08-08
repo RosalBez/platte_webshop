@@ -7,23 +7,38 @@ export const AuthenticationContext= createContext(null)
 
 function AuthenticationContextProvider({children}) {
 
-    const [isAuth, setIsAuth] = useState(false)
+    const [auth, setAuth] = useState({
+        isAuth: false,
+        user: null,
+
+});
     const navigate = useNavigate()
 
     function login() {
-        setIsAuth(true)
+        setAuth({
+            ...auth,
+            isAuth: true,
+            user: {
+                email: 'klaasje@novi.nl',
+                id: 1,
+            }
+        })
         navigate('/Profiel')
     }
 
     function logout () {
-        setIsAuth(false)
+        setAuth({
+            ...auth,
+            isAuth: false,
+            user: null,
+        })
         navigate('/')
     }
 
     const data = {
-        isAuth,
-        logout,
-        login,
+        isAuth: auth.isAuth,
+        logout: logout,
+        login: login,
     }
 
 

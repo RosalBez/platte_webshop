@@ -53,3 +53,9 @@
 
 }
 
+.error-message-register {
+    color: #F68037;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
+}

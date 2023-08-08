@@ -4,7 +4,7 @@ import './DropdownNavItem.css';
 
 const DropdownMenu = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-    const dropdownRef = useRef(null);
+    const dropdownRef = useState(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -13,7 +13,11 @@ const DropdownMenu = (props) => {
     const handleItemClick = (menuItem) => {
         console.log(`Geselecteerd menu-item: ${menuItem}`);
         toggleDropdown();
-    };
+        if (menuItem === 'Log uit') {
+            props.onLogout();
+        }
+        }
+
 
     const handleMouseEnter = () => {
         setIsOpen(true);
@@ -40,7 +44,7 @@ const DropdownMenu = (props) => {
         <div className="dropdown-container" ref={dropdownRef}>
             <div className="dropdown-toggle" onMouseEnter={handleMouseEnter}>
                 <Link to={props.menuLink}>
-                    <img src={props.image} alt={props.title} className='shop' />
+                    <img src={props.image} alt={props.title} className='image' />
                 </Link>
             </div>
             {isOpen && (

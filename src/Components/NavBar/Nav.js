@@ -11,7 +11,9 @@ import DropdownMenu from "./dropdownmenu/DropdownNavItem";
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
 
 function Nav(props) {
-    const {isAuth, login, logout} = useContext(AuthenticationContext)
+    const {isAuth, logout} = useContext(AuthenticationContext)
+
+
     return (
 
             <nav className="navigation">
@@ -54,7 +56,8 @@ function Nav(props) {
                                     menulink='/Profiel'
                                     image={profile}
                                     title='Profiel'
-                                    menuItems={['Profiel', 'Wensenlijst']}
+                                    menuItems={['Profiel', 'Wensenlijst', 'Log uit']}
+                                    onLogout={logout}
                                     />
                             </li>
                         )}
