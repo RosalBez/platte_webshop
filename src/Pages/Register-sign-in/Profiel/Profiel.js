@@ -1,19 +1,18 @@
-import React, {useContext} from 'react';
-import {AuthenticationContext} from "../../../context/AuthenticationProvider/AuthenticationContext";
-import {Link} from "react-router-dom";
+import React, { useContext } from 'react';
+import './Profiel.css';
+import { AuthenticationContext } from '../../../context/AuthenticationProvider/AuthenticationContext'; // Importeer de juiste context
 
 function Profiel() {
-    const {isAuth, login, logout} = useContext(AuthenticationContext)
-
+    const { user: { id }, isAuth, logout, login } = useContext(AuthenticationContext);  //vanwege de backend kan ik hier username niet neerzetten maar moet ik ID neerzetten //
 
     return (
-        <div>
-            <h1>PROFIEL </h1>
-            {/*<Link to='../RegisterSignIn'> als ik dit aan zet kan ik nog kiezen of ik bij uitloggen wil navigeren naar de inlogpagina, dit kan ik nog navragen bij gebruikers*/}
-                <button type='button' onClick={isAuth ? logout : login}>{isAuth ? 'log uit' : 'log in'}</button>
-            {/*</Link>*/}
-
-            {isAuth && <span>Welkom naam</span>}
+        <div className='inner-content-container'>
+            <h1>PROFIEL</h1>
+            <p>Je bent ingelogd, welkom <span>{ id }</span> op jouw profielpagina!</p>
+            <p>Log hier uit</p>
+            <button type='button' onClick={isAuth ? logout : login}>
+                {isAuth ? 'log uit' : 'log in'}
+            </button>
         </div>
     );
 }

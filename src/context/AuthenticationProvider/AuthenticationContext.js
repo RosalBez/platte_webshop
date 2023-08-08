@@ -1,5 +1,7 @@
 import React, {createContext, useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
 
 export const AuthenticationContext= createContext(null)
 
@@ -14,19 +16,22 @@ function AuthenticationContextProvider({children}) {
 });
     const navigate = useNavigate()
 
-    function login() {
+    function login(jwt_token) {
+        const decodedToken = jwt_decode(jwt_token)
+        localStorage.setItem('token',  jwt_token)
         setAuth({
             ...auth,
             isAuth: true,
             user: {
-                email: 'klaasje@novi.nl',
-                id: 1,
+                username: decodedToken.username,
+                id: decodedToken.sub,
             }
         })
         navigate('/Profiel')
     }
 
     function logout () {
+        localStorage.removeItem('token');
         setAuth({
             ...auth,
             isAuth: false,
@@ -37,6 +42,7 @@ function AuthenticationContextProvider({children}) {
 
     const data = {
         isAuth: auth.isAuth,
+        user: auth.user,
         logout: logout,
         login: login,
     }

@@ -3,7 +3,6 @@ import axios from 'axios';
 import './Register.css';
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
 
-// ... (import statements and other code)
 
 function Register(props) {
     const {auth, login, logout} = useContext(AuthenticationContext);
@@ -134,15 +133,12 @@ function Register(props) {
                         </label>
 
 
-
-
                         <span className='register-button-two'>
                             <button type='submit'>Registreer</button>
                         </span>
                         {error &&
                             <p className='error-message-register'>Er is iets misgegaan bij het registreren, probeer het
-                                nog eens. LET OP! voor deze website is een emailadres dat eindigt op @novi.nl
-                                verplicht</p>}
+                                nog eens.</p>}
                     </div>
                 </form>
 
