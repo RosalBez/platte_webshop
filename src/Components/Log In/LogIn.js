@@ -21,7 +21,7 @@ function LogIn(props) {
                 password: passwordValue,
             })
             setError(null);
-            login(res.data.accessToken);
+            login(res.data.accessToken, '/profiel');
         }
         catch (e) {
             console.error ( "Onjuist email en wachtwoord combinatie", e);
