@@ -28,6 +28,9 @@ function AuthenticationContextProvider({children}) {
         }
     }, [])
 
+    const [userImage, setUserImage] = useState(null); // Voeg de staat voor de profielfoto toe
+
+
 
     async function login(jwt_token, redirect) {
         const decodedToken = jwt_decode(jwt_token);
@@ -52,11 +55,35 @@ function AuthenticationContextProvider({children}) {
                 user: {
                     email,
                     id,
-                    username
+                    username,
+                    userImage,
                 },
                 status: "done"
             })
             console.log('De gebruiker is ingelogd 🔓')
+
+            try {
+                const response = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/image`, {
+                    headers: {
+                        Authorization: `Bearer ${jwt_token}`,
+                    },
+                });
+                setAuth({
+                    ...auth,
+                    isAuth: true,
+                    user: {
+                        email,
+                        id,
+                        username,
+                        userImage: response.data.base64Image, // Update ook de profielfoto
+                    },
+                    status: "done"
+                });
+            } catch (error) {
+                console.error('Fout bij het laden van de profielfoto:', error);
+            }
+
+
             if (redirect) navigate(redirect);
         } catch (e) {
             console.error(e)
@@ -76,7 +103,7 @@ function AuthenticationContextProvider({children}) {
 
     const data = {
         isAuth: auth.isAuth,
-        user: auth.user,
+        user: { ...auth.user, userImage },
         logout: logout,
         login: login,
     }
