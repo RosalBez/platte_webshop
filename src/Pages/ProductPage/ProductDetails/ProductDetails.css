@@ -25,9 +25,17 @@
 
 .product-description-title {
     color: #261397;
-    margin: 0px 20px 20px 0px;
-    padding-bottom: 80px;
+    margin: 0px 20px 10px 0px;
+
 }
+
+
+.favorite-heart {
+    width: 2vw;
+    margin: 20px;
+
+}
+
 
 .description-details {
     width: 500px;
@@ -54,3 +62,4 @@
     height: 50px;
 
 }
+

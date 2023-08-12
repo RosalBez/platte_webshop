@@ -4,16 +4,16 @@ import jwt_decode from "jwt-decode";
 import { checkTokenValidity } from "../../Helper/tokenValidityCheck";
 import axios from 'axios';
 
-export const AuthenticationContext = createContext(null);
+export const AuthenticationContext = createContext({});
 
 function AuthenticationContextProvider({ children }) {
+    const navigate = useNavigate();
     const [auth, setAuth] = useState({
         isAuth: false,
         user: null,
         status: "pending",
     });
-    const [error, setError] = useState(false);
-    const navigate = useNavigate();
+
 
     useEffect(() => {
         const storedToken = localStorage.getItem('token');
@@ -21,48 +21,15 @@ function AuthenticationContextProvider({ children }) {
         if (storedToken && checkTokenValidity(storedToken)) {
             void login(storedToken);
         } else {
-            setAuth({
-                ...auth,
-                isAuth: false,
-                user: null,
-                status: 'done'
-            });
-        }
+            void logout()
+            }
+
     }, []);
 
-    async function login(jwt_token, redirect) {
-        const decodedToken = jwt_decode(jwt_token);
-        localStorage.setItem('token', jwt_token);
-        console.log(decodedToken)
-
-        try {
-            const response = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${jwt_token}`,
-                }
-            });
-
-            const userData = response.data;
-            console.log('API response:', userData);
-
-            setAuth({
-                ...auth,
-                isAuth: true,
-                user: {
-                    id: userData.id,
-                    email: userData.email,
-                    username: userData.username,
-                    info: userData.info,
-                },
-                status: 'done'
-            });
-
-            if (redirect) navigate(redirect);
-        } catch (error) {
-            console.error('Error during login:', error);
-            setError(true);
-        }
+    function login(JWT) {
+        localStorage.setItem('token', JWT);
+        const decoded = jwt_decode(JWT);
+        fetchUserData(decoded.sub, JWT, '/profiel');
     }
 
 
@@ -72,8 +39,45 @@ function AuthenticationContextProvider({ children }) {
             ...auth,
             isAuth: false,
             user: null,
+            status: 'done'
         });
         navigate('/');
+    }
+
+    async function fetchUserData(id, token, redirect) {
+        try {
+            const result = await axios.get(
+                `https://frontend-educational-backend.herokuapp.com/api/user/`,
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            setAuth({
+                ...auth,
+                isAuth: true,
+                user: {
+                    username: result.data.username,
+                    email: result.data.email,
+                    id: result.data.id,
+                },
+                status: 'done',
+            });
+
+            if (redirect) {
+                navigate(redirect);
+            }
+        } catch (e) {
+            console.error(e);
+            setAuth({
+                isAuth: false,
+                user: null,
+                status: 'done',
+            });
+        }
     }
 
     const data = {

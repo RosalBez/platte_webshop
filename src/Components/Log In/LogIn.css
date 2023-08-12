@@ -11,6 +11,7 @@
     background-position: center;
     background-position-x: right;
     background-position-y: top;
+    flex-shrink: 1;
 }
 
 
@@ -21,8 +22,10 @@
 }
 .login-label {
     display: flex;
-    gap: 40px;
+    gap: 35px;
     color: #261397;
+
+
 
 }
 

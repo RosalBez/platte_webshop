@@ -4,6 +4,7 @@ import axios from 'axios';
 import './ProductDetails.css';
 import basket from '../../../assets/Specifics/icons8-basket-100.png';
 import Arrow1 from "../../../assets/photos/Arrow1.png";
+import favorite from "../../../assets/Specifics/favorite (Stroke).svg"
 
 function ProductDetails() {
     const { productId } = useParams();
@@ -36,6 +37,7 @@ function ProductDetails() {
                 <img src={imageSrc} alt='productfoto' className='specific-product-image'></img>
                 <section className='product-description'>
                     <h2 className='product-description-title'>{product.title}</h2>
+                    <img src={favorite} alt='favorite heart' className='favorite-heart'/>
                     <p className='description-details'>{product.description}</p>
                     <div className='price-basket'>
                         <p className='description-price'>  Price: ${product.price}</p>

@@ -10,7 +10,7 @@ function Register(props) {
     const [error, setError] = useState(false);
     const [isRegistered, setIsRegistered] = useState(false);
     const [formState, setFormState] = useState({
-        name: '',
+        name: '', /*****deze kun je niet mee geven in de backend van novi**/
         username: '',
         email: '',
         password: '',
@@ -31,12 +31,22 @@ function Register(props) {
             login(res.data.token); // Aannemende dat login de token opslaat in de context
             setIsRegistered(true);
 
-        } catch (e) {
-            console.error("Er lijkt iets mis te gaan, probeer het nog eens", e);
-            setError(true);
+        } catch (error) {
+            if (error.response) {
+                // Er is een foutieve response ontvangen van de server
+                const { status, data } = error.response;
+
+                if (status === 400) {
+                    setError(true);
+                    console.error("Er is een validatiefout opgetreden:", data.error);
+                } else {
+                    console.error("Er is een onverwachte fout opgetreden:", error);
+                }
+            } else {
+                console.error("Er is een fout opgetreden:", error);
+            }
         }
     };
-
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         setFormState(prevState => ({
