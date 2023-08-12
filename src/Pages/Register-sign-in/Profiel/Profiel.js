@@ -24,9 +24,14 @@ function Profiel() {
                 <div className='profile-buttons'>
                     <NavLink to='GebruikersGegevens'><Button className='profile-button' title="Mijn gegevens"/></NavLink>
                     <NavLink to='/Profiel/Wensenlijst'><Button className='profile-button' title="Mijn wensen"/></NavLink>
-                    <Button className='profile-button' title="Mijn bestellingen"/>
+                    <NavLink to='/Profiel/Bestellingen'><Button className='profile-button' title="Mijn Bestellingen"/></NavLink>
+
                 </div>
-                <button type='button'  className='logout' onClick={isAuth ? logout : login}>Log uit </button>
+
+                <div className='logout-button-profile'>
+
+                    <button type='button'  className='logout' onClick={isAuth ? logout : login}>Log uit </button>
+                </div>
 
         </div>
     )

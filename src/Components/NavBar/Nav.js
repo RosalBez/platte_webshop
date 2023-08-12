@@ -56,7 +56,7 @@ function Nav(props) {
                                     menulink='/Profiel'
                                     image={profile}
                                     title='Profiel'
-                                    menuItems={['Profiel', 'Wensenlijst', 'Log uit']}
+                                    menuItems={['Profiel', 'Wensenlijst', 'Bestellingen', 'Log uit']}
                                     onLogout={logout}
                                     />
                             </li>

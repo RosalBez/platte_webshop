@@ -1,7 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
 import { AuthenticationContext} from "../../../context/AuthenticationProvider/AuthenticationContext";
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import axios from "axios";
+import Arrow1 from '../../../assets/photos/Arrow1.png'
 import profilePicture from "../../../assets/photos/profile_picture.jpg";
 
 function Gegevens() {
@@ -51,6 +52,7 @@ function Gegevens() {
     return (
         <div className='inner-content-container'>
             <h1>Gegevenspagina</h1>
+            <Link to='/profiel'><img className='go-back-arrow' src={Arrow1} alt='go-back-arrow'/></Link>
 
             <div className='profile-div'>
                 <img className='profile-image' src={imageData} alt='profile picture' />

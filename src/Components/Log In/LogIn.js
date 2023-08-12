@@ -35,44 +35,44 @@ function LogIn(props) {
         <div className='inner-content-container login-background-style'>
 
 
-                <form className='login-form' onSubmit={handleSubmit}>
-                    <h2 className='title-login'> Log In </h2>
+            <form className='login-form' onSubmit={handleSubmit}>
+                <h2 className='title-login'> Log In </h2>
 
 
-                    <label htmlFor='login-userName' className='login-label'>
-                        Gebruikersnaam:
-                        <input
-                            className='login-input'
-                            type='username'
-                            id='login-username'
-                            name='username'
-                            value={userNameValue}
-                            onChange={(e) => setUserNameValue(e.target.value)}
-                            />
-                    </label>
+                <label htmlFor='login-userName' className='login-label'>
+                    Gebruikersnaam:
+                    <input
+                        className='login-input'
+                        type='username'
+                        id='login-username'
+                        name='username'
+                        value={userNameValue}
+                        onChange={(e) => setUserNameValue(e.target.value)}
+                    />
+                </label>
 
 
-                    <label htmlFor='login-password' className='login-label'>
-                        wachtwoord:
-                        <input
-                            className='login-input'
-                            type='password'
-                            id='Login-password'
-                            name='password'
-                            value={passwordValue}
-                            onChange={(e) => setPasswordValue(e.target.value)}
-                            autoComplete="off"
-                        />
-                    </label>
+                <label htmlFor='login-password' className='login-label'>
+                    wachtwoord:
+                    <input
+                        className='login-input'
+                        type='password'
+                        id='Login-password'
+                        name='password'
+                        value={passwordValue}
+                        onChange={(e) => setPasswordValue(e.target.value)}
+                        autoComplete="off"
+                    />
+                </label>
 
-                    <span className='login-button-two'>
+                <span className='login-button-two'>
 
                             <button type='submit'> Login </button>
 
 
                     </span>
-                    {error && <p className='error-message-login'>Onjuist email en wachtwoord combinatie, probeer het nog eens</p>}
-                </form>
+                {error && <p className='error-message-login'>Onjuist email en wachtwoord combinatie, probeer het nog eens</p>}
+            </form>
         </div>
     );
 }

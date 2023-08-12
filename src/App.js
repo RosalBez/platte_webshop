@@ -19,6 +19,8 @@ import Wensenlijst from "./Pages/Register-sign-in/Wensenlijst/Wensenlijst";
 import GebruikersGegevens from "./Pages/Register-sign-in/mijn gegevens/gebruikers_gegevens";
 import {AuthenticationContext} from "./context/AuthenticationProvider/AuthenticationContext";
 import ProductDetails from "./Pages/ProductPage/ProductDetails/ProductDetails";
+import Bestellingen from "./Pages/Register-sign-in/bestellingen/bestellingen";
+
 
 function App() {
     const {isAuth, login, logout} = useContext(AuthenticationContext)
@@ -43,8 +45,10 @@ function App() {
                 <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
                 <Route path='/Profiel' element={ isAuth ? <Profiel/> : <Navigate/>}/>
                 <Route path='/Wensenlijst' element={ isAuth ? <Wensenlijst/> : <Navigate/>}/>
+                <Route path='/Bestellingen' element={ isAuth ? <Bestellingen/> : <Navigate/>}/>
                 <Route path='/Profiel/GebruikersGegevens' element={ isAuth ? <GebruikersGegevens/> : <Navigate/>}/>
                 <Route path='/Profiel/Wensenlijst' element={ isAuth ? <Wensenlijst/> : <Navigate/>}/>
+                <Route path='/Profiel/Bestellingen' element={ isAuth ? <Bestellingen/> : <Navigate/>}/>
 
                 <Route path='/shoppingcart' element={<Shoppingcart/>}/>
 

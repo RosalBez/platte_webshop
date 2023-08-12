@@ -1,35 +1,66 @@
-import React, { createContext, useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import React, {createContext, useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
 import jwt_decode from "jwt-decode";
-import { checkTokenValidity } from "../../Helper/tokenValidityCheck";
-import axios from 'axios';
+import {checkTokenValidity} from "../../Helper/tokenValidityCheck";
+import axios from "axios";
 
-export const AuthenticationContext = createContext({});
 
-function AuthenticationContextProvider({ children }) {
-    const navigate = useNavigate();
+export const AuthenticationContext= createContext(null)
+
+function AuthenticationContextProvider({children}) {
+
     const [auth, setAuth] = useState({
         isAuth: false,
         user: null,
         status: "pending",
-    });
 
+    });
+    const navigate = useNavigate()
 
     useEffect(() => {
-        const storedToken = localStorage.getItem('token');
+        const storedToken = localStorage.getItem('token')
 
         if (storedToken && checkTokenValidity(storedToken)) {
-            void login(storedToken);
+            void login(storedToken)
         } else {
             void logout()
-            }
 
-    }, []);
+        }
+    }, [])
 
-    function login(JWT) {
-        localStorage.setItem('token', JWT);
-        const decoded = jwt_decode(JWT);
-        fetchUserData(decoded.sub, JWT, '/profiel');
+
+    async function login(jwt_token, redirect) {
+        const decodedToken = jwt_decode(jwt_token);
+        localStorage.setItem('token', jwt_token);
+        console.log(decodedToken)
+        try {
+            const {
+                data: {
+                    email,
+                    username,
+                    id
+                }
+            } = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${jwt_token}`
+                }
+            })
+            setAuth({
+                ...auth,
+                isAuth: true,
+                user: {
+                    email,
+                    id,
+                    username
+                },
+                status: "done"
+            })
+            console.log('De gebruiker is ingelogd 🔓')
+            if (redirect) navigate(redirect);
+        } catch (e) {
+            console.error(e)
+        }
     }
 
 
@@ -39,45 +70,8 @@ function AuthenticationContextProvider({ children }) {
             ...auth,
             isAuth: false,
             user: null,
-            status: 'done'
-        });
-        navigate('/');
-    }
-
-    async function fetchUserData(id, token, redirect) {
-        try {
-            const result = await axios.get(
-                `https://frontend-educational-backend.herokuapp.com/api/user/`,
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${token}`,
-                    },
-                }
-            );
-
-            setAuth({
-                ...auth,
-                isAuth: true,
-                user: {
-                    username: result.data.username,
-                    email: result.data.email,
-                    id: result.data.id,
-                },
-                status: 'done',
-            });
-
-            if (redirect) {
-                navigate(redirect);
-            }
-        } catch (e) {
-            console.error(e);
-            setAuth({
-                isAuth: false,
-                user: null,
-                status: 'done',
-            });
-        }
+        })
+        navigate('/')
     }
 
     const data = {
@@ -85,8 +79,8 @@ function AuthenticationContextProvider({ children }) {
         user: auth.user,
         logout: logout,
         login: login,
+    }
 
-    };
 
     return (
         <AuthenticationContext.Provider value={data}>
@@ -94,5 +88,4 @@ function AuthenticationContextProvider({ children }) {
         </AuthenticationContext.Provider>
     );
 }
-
-export default AuthenticationContextProvider;
+    export default AuthenticationContextProvider;

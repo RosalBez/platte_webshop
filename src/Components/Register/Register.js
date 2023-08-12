@@ -2,13 +2,11 @@ import React, {useContext, useState} from 'react';
 import axios from 'axios';
 import './Register.css';
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
-import {Navigate} from 'react-router-dom'
 
 
 function Register(props) {
-    const {login} = useContext(AuthenticationContext);
+    const {auth, login, logout} = useContext(AuthenticationContext);
     const [error, setError] = useState(false);
-    const [isRegistered, setIsRegistered] = useState(false);
     const [formState, setFormState] = useState({
         name: '', /*****deze kun je niet mee geven in de backend van novi**/
         username: '',
@@ -28,25 +26,12 @@ function Register(props) {
             setError(false);
             const res = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', formState);
 
-            login(res.data.token); // Aannemende dat login de token opslaat in de context
-            setIsRegistered(true);
-
-        } catch (error) {
-            if (error.response) {
-                // Er is een foutieve response ontvangen van de server
-                const { status, data } = error.response;
-
-                if (status === 400) {
-                    setError(true);
-                    console.error("Er is een validatiefout opgetreden:", data.error);
-                } else {
-                    console.error("Er is een onverwachte fout opgetreden:", error);
-                }
-            } else {
-                console.error("Er is een fout opgetreden:", error);
-            }
+        } catch (e) {
+            console.error("Er lijkt iets mis te gaan, probeer het nog eens", e);
+            setError(true);
         }
     };
+
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         setFormState(prevState => ({
@@ -54,11 +39,6 @@ function Register(props) {
             [name]: value,
         }));
     };
-
-    if (isRegistered) {
-        return <Navigate to="/profiel"/>;
-    }
-
 
     return (
         <div className='inner-content-container'>
@@ -77,7 +57,6 @@ function Register(props) {
                             name='name'
                             value={formState.name}
                             onChange={handleInputChange}
-
                         />
                     </label>
 
@@ -125,8 +104,8 @@ function Register(props) {
                                 className='register-input-address'
                                 type='text'
                                 id='register-address'
-                                name='info'
-                                placeholder='adres en huisnummer'
+                                name='address'
+                                placeholder='adres'
                                 value={formState.info}
                                 onChange={handleInputChange}
                             />
@@ -139,8 +118,7 @@ function Register(props) {
                         </span>
                         {error &&
                             <p className='error-message-register'>Er is iets misgegaan bij het registreren, probeer het
-                                nog eens. LET OP: een gebruiksnaam en een wachtwoord moeten uit tenminste 6 tekens bestaan!</p>}
-
+                                nog eens.</p>}
                     </div>
                 </form>
 
@@ -148,7 +126,7 @@ function Register(props) {
             </div>
 
         </div>
-);
+    );
 }
 
 export default Register;
