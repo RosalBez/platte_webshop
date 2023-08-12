@@ -16,7 +16,9 @@ import Kettingen from "./Pages/ProductPage/Kettingen/Kettingen";
 import Brilkoorden from "./Pages/ProductPage/Brilkoorden/Brilkoorden";
 import Profiel from "./Pages/Register-sign-in/Profiel/Profiel";
 import Wensenlijst from "./Pages/Register-sign-in/Wensenlijst/Wensenlijst";
+import GebruikersGegevens from "./Pages/Register-sign-in/mijn gegevens/gebruikers_gegevens";
 import {AuthenticationContext} from "./context/AuthenticationProvider/AuthenticationContext";
+import ProductDetails from "./Pages/ProductPage/ProductDetails/ProductDetails";
 
 function App() {
     const {isAuth, login, logout} = useContext(AuthenticationContext)
@@ -34,11 +36,18 @@ function App() {
                 <Route path='/Armbanden' element={<Armbanden/>}/>
                 <Route path='/Kettingen' element={<Kettingen/>}/>
                 <Route path='/Brilkoorden' element={<Brilkoorden/>}/>
-                <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
+                <Route path="/products/:productId" element={<ProductDetails/>} />
 
+
+
+                <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
                 <Route path='/Profiel' element={ isAuth ? <Profiel/> : <Navigate/>}/>
                 <Route path='/Wensenlijst' element={ isAuth ? <Wensenlijst/> : <Navigate/>}/>
+                <Route path='/Profiel/GebruikersGegevens' element={ isAuth ? <GebruikersGegevens/> : <Navigate/>}/>
+                <Route path='/Profiel/Wensenlijst' element={ isAuth ? <Wensenlijst/> : <Navigate/>}/>
+
                 <Route path='/shoppingcart' element={<Shoppingcart/>}/>
+
                 <Route path='/FAQS' element={<FAQS/>}/>
                 <Route path='*' element={<NotFound/>}/>
             </Routes>

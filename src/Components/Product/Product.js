@@ -74,15 +74,15 @@ const Product = (props) => {
                 <h1>{props.title}</h1>
                 <ul className="product-overview">
                     {data.map((product, index) => {
-                        // Kies de afbeelding op basis van het huidige productindex
+                        // Kiest de afbeelding op basis van het huidige productindex
                         const imageIndex = index % importedImages.length;
                         const imageSrc = importedImages[imageIndex];
 
                         return (
                             <li className="product-card" key={product.id}>
-                                <Link to={`/products/${product.id}`}>
+                                <Link to={`/products/${product.id}?image=${encodeURIComponent(imageSrc)}`}>
                                     <div className="product-details">
-                                        <img src={imageSrc} alt={product.title} />
+                                        <img className='product-image' src={imageSrc} alt={product.title} />
                                         <h4 className='product-title'>
                                             {product.title.slice(0, 11)} €{product.price}
                                         </h4>

@@ -1,24 +1,51 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import {useParams} from "react-router-dom";
-import './ProductDetails.css'
+import React, { useEffect, useState } from 'react';
+import {useParams, useLocation, Link} from 'react-router-dom';
+import axios from 'axios';
+import './ProductDetails.css';
+import basket from '../../../assets/Specifics/icons8-basket-100.png';
+import Arrow1 from "../../../assets/photos/Arrow1.png";
 
-const ProductDetails = () => {
+function ProductDetails() {
+    const { productId } = useParams();
+    const location = useLocation();
+    const [product, setProduct] = useState(null);
+    const [imageSrc, setImageSrc] = useState('');
 
-    const {id} = useParams()
+    useEffect(() => {
+        axios.get(`https://fakestoreapi.com/products/${productId}`)
+            .then(response => {
+                setProduct(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching product details:', error);
+            });
 
+        const searchParams = new URLSearchParams(location.search);
+        const image = searchParams.get('image');
+        setImageSrc(image);
+    }, [productId, location]);
+
+    if (!product) {
+        return <p>Loading...</p>;
+    }
     return (
-        <>
-            <div className='outer-content-container'>
-                <div className='inner-content-container'>
-                    <h1> ProductPage { id }</h1>
-                    <p> dit is de pagina met de product details van <strong> brilkoord { id } </strong></p>
-                    <p><Link to='/products'> Ga terug</Link> naar het overzicht.</p>
-                </div>
+
+        <div className="inner-content-container">
+            <Link to='/products'><img className='go-back-arrow' src={Arrow1} alt='go-back-arrow'/></Link>
+            <div className='product-description-overview'>
+                <img src={imageSrc} alt='productfoto' className='specific-product-image'></img>
+                <section className='product-description'>
+                    <h2 className='product-description-title'>{product.title}</h2>
+                    <p className='description-details'>{product.description}</p>
+                    <div className='price-basket'>
+                        <p className='description-price'>  Price: ${product.price}</p>
+                        <img src={basket} alt='basket' className='description-basket'/>
+                    </div>
+                </section>
+
             </div>
 
-        </>
-
+        </div>
     );
 }
 

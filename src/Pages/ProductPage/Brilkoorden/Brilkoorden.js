@@ -10,8 +10,7 @@ function Brilkoorden() {
             <Link to='/products'><img className='go-back-arrow' src={Arrow1} alt='go-back-arrow'/></Link>
             <Link to='/ProductDetails/1'>
                 <Product title='Brilkoorden' category='jewelery'></Product>
-                <Product category='jewelery'></Product>
-                <Product category='jewelery'></Product>
+
             </Link>
 
             <p className='nav-link'> <NavLink to='/products' className='go-back'>Ga terug </NavLink> naar het overzicht </p>

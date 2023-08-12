@@ -2,19 +2,22 @@ import React, {useContext, useState} from 'react';
 import axios from 'axios';
 import './Register.css';
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
+import {Navigate} from 'react-router-dom'
 
 
 function Register(props) {
-    const {auth, login, logout} = useContext(AuthenticationContext);
+    const {login} = useContext(AuthenticationContext);
     const [error, setError] = useState(false);
+    const [isRegistered, setIsRegistered] = useState(false);
     const [formState, setFormState] = useState({
         name: '',
         username: '',
         email: '',
         password: '',
-        address: '',
-        postcode: '',
-        houseNumber: '',
+        info: '',
+        // address: '', /*****deze kun je niet mee geven in de backend van novi**/
+        // postcode: '', /*****deze kun je niet mee geven in de backend van novi**/
+        // houseNumber: '', /*****deze kun je niet mee geven in de backend van novi**/
 
     });
 
@@ -24,6 +27,9 @@ function Register(props) {
         try {
             setError(false);
             const res = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', formState);
+
+            login(res.data.token); // Aannemende dat login de token opslaat in de context
+            setIsRegistered(true);
 
         } catch (e) {
             console.error("Er lijkt iets mis te gaan, probeer het nog eens", e);
@@ -38,6 +44,11 @@ function Register(props) {
             [name]: value,
         }));
     };
+
+    if (isRegistered) {
+        return <Navigate to="/profiel"/>;
+    }
+
 
     return (
         <div className='inner-content-container'>
@@ -56,6 +67,7 @@ function Register(props) {
                             name='name'
                             value={formState.name}
                             onChange={handleInputChange}
+
                         />
                     </label>
 
@@ -103,34 +115,13 @@ function Register(props) {
                                 className='register-input-address'
                                 type='text'
                                 id='register-address'
-                                name='address'
-                                placeholder='adres'
-                                value={formState.address}
+                                name='info'
+                                placeholder='adres en huisnummer'
+                                value={formState.info}
                                 onChange={handleInputChange}
                             />
                         </label>
 
-                        <label htmlFor='register-postcode' className='register-label-postcode'>
-
-                            <input
-                                className='register-input-postcode'
-                                type='text'
-                                id='register-postcode'
-                                name='postcode'
-                                value={formState.postcode}
-                                placeholder='postcode'
-                                onChange={handleInputChange}
-                            />
-                            <input
-                                className='register-input-housenumber'
-                                type='text'
-                                id='register-houseNumber'
-                                name='houseNumber'
-                                value={formState.houseNumber}
-                                placeholder='huisnr.'
-                                onChange={handleInputChange}
-                            />
-                        </label>
 
 
                         <span className='register-button-two'>
@@ -138,7 +129,8 @@ function Register(props) {
                         </span>
                         {error &&
                             <p className='error-message-register'>Er is iets misgegaan bij het registreren, probeer het
-                                nog eens.</p>}
+                                nog eens. LET OP: een gebruiksnaam en een wachtwoord moeten uit tenminste 6 tekens bestaan!</p>}
+
                     </div>
                 </form>
 

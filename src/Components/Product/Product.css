@@ -22,7 +22,7 @@
     /*border: solid red 4px; alleen voor ontwikkelen gebruiken*/
 }
 
-.product-details > img {
+.product-image {
     width: 180px;
     height: 250px;
     border-radius: 25px;
