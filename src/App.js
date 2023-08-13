@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import './App.css';
-// import axios from "axios";
 import {Routes, Route, Navigate} from 'react-router-dom'
 import Nav from "./Components/NavBar/Nav";
 import Home from './Pages/home/Home';
@@ -23,7 +22,7 @@ import Bestellingen from "./Pages/Register-sign-in/bestellingen/bestellingen";
 
 
 function App() {
-    const {isAuth, login, logout} = useContext(AuthenticationContext)
+    const {isAuth} = useContext(AuthenticationContext)
     console.log(isAuth)
 
     return (

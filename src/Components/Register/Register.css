@@ -126,3 +126,11 @@
     font-style: italic;
     margin-top: 10px;
 }
+
+.success-message-register {
+    color: #F68037;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 10px;
+
+}

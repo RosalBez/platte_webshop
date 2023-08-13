@@ -1,6 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './DropdownNavItem.css';
+
 
 const DropdownMenu = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ const DropdownMenu = (props) => {
         return () => {
             document.removeEventListener('mousemove', handleMouseMovement);
         };
-    }, []);
+    });
 
     return (
         <div className="dropdown-container" ref={dropdownRef}>

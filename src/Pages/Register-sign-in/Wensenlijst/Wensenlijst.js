@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import Arrow1 from "../../../assets/photos/Arrow1.png";
 import './Wensenlijst.css'
 
-function Wensenlijst(props) {
+function Wensenlijst() {
     return (
         <div className='inner-content-container'>
             <h1>Jouw wensen</h1>

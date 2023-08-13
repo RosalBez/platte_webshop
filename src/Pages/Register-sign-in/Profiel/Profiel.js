@@ -1,15 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthenticationContext } from '../../../context/AuthenticationProvider/AuthenticationContext';
 import Button from '../../../Components/Button/Button'
-import {NavLink, useLocation } from "react-router-dom";
-// import profilePicture from './../../../assets/photos/profile_picture.jpg';
+import {NavLink } from "react-router-dom";
 import './Profiel.css';
-import ProfilePicture from "../../../Components/ProfilePicture/ProfilePicture";
+
 
 
 function Profiel() {
-    const location = useLocation();
-    const { isAuth, login, logout, username}= useContext(AuthenticationContext);
+    const { isAuth, login, logout, user: {username}}= useContext(AuthenticationContext);
 
 
     return (

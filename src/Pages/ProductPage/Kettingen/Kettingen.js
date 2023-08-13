@@ -9,8 +9,7 @@ function Kettingen(props) {
             <Link to='/products'><img className='go-back-arrow' src={Arrow1} alt='go-back-arrow'/></Link>
             <Link to='/ProductDetails'>
                 <Product title='kettingen' category='electronics'></Product>
-                <Product category='electronics'></Product>
-                <Product category='electronics'></Product>
+
             </Link>
             <p className='nav-link'> <NavLink to='/products' className='go-back'>Ga terug </NavLink> naar het overzicht </p>
         </>

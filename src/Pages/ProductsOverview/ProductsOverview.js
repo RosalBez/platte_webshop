@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Product from "../../Components/Product/Product";
 import './ProductsOverview.css'
 
-function ProductsOverview(props) {
+function ProductsOverview() {
     return (
         <>
             <h1> Alle producten </h1>

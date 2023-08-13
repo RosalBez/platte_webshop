@@ -1,11 +1,11 @@
 import React, {useContext, useState} from 'react';
 import axios from "axios";
-import './LogIn.css'
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
-import {Link} from "react-router-dom";
+import './LogIn.css'
+
 
 function LogIn(props) {
-    const {auth, login} = useContext(AuthenticationContext)
+    const {login} = useContext(AuthenticationContext)
     const [error, setError] = useState(false);
 
 

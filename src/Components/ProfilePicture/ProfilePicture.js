@@ -8,10 +8,10 @@ function ProfilePicture() {
     const [userImage, setUserImage] = useState(null);
 
     useEffect(() => {
-        if (user && user.userImage) {
-            setUserImage(user.userImage);
-    }
-}, [user])
+        if (user && user.profileImage) {
+            setUserImage(user.profileImage);
+        }
+    }, [user])
 
 
     const handleFileChange = (event) => {
@@ -43,7 +43,6 @@ function ProfilePicture() {
                 .then(response => {
                     console.log('Upload successful:', response.data);
                     setUserImage(base64Image); // Update de afbeelding met de nieuwe base64-afbeelding
-                    localStorage.setItem('userImage', base64Image)
                 })
                 .catch(error => {
                     console.error('Upload failed:', error);
