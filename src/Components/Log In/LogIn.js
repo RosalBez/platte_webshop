@@ -22,6 +22,7 @@ function LogIn(props) {
             })
             setError(null);
             login(res.data.accessToken, '/profiel');
+            console.log(res.data)
         }
         catch (e) {
             console.error ( "Onjuist email en wachtwoord combinatie", e);

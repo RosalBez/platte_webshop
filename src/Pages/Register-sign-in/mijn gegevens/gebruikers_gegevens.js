@@ -19,7 +19,7 @@ function Gegevens() {
                 <section className='user-information'>
                     <p>Gebruikersnaam: {user.username}</p>
                     <p>Emailadres: {user.email}</p>
-                <p> Info: {user.info}</p>
+                    <p> Info: {user.info}</p>
 
                 </section>
 

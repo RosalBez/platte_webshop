@@ -27,7 +27,7 @@ function ProductDetails() {
     }, [productId, location]);
 
     if (!product) {
-        return <p>Loading...</p>;
+        return <p>Loading... productdetails</p>;
     }
     return (
 

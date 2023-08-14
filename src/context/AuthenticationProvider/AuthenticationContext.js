@@ -70,6 +70,7 @@ function AuthenticationContextProvider({children}) {
             ...auth,
             isAuth: false,
             user: null,
+            status: 'done',
         })
         navigate('/')
     }
