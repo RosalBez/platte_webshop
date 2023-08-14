@@ -1,13 +1,18 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import './Brilkoorden.css'
 import Product from "../../../Components/Product/Product";
-import Photo3 from '../../../assets/photos/Photo3.jpg';
+import Arrow1 from '../../../assets/photos/Arrow1.png'
 
 function Brilkoorden() {
     return (
         <>
-            <Product title='Brilkoorden' image={Photo3}></Product>
+            <Link to='/products'><img className='go-back-arrow' src={Arrow1} alt='go-back-arrow'/></Link>
+            <Link to='/ProductDetails/1'>
+                <Product title='Brilkoorden' category='jewelery'></Product>
+
+            </Link>
+
             <p className='nav-link'> <NavLink to='/products' className='go-back'>Ga terug </NavLink> naar het overzicht </p>
 
         </>

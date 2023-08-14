@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { NavLink } from "react-router-dom";
-import shop from '../../../assets/Specifics/shop.svg';
 import './DropdownNavItem.css';
 
-const DropdownMenu = () => {
+
+const DropdownMenu = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-    const dropdownRef = useRef(null);
+    const dropdownRef = useState(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -15,7 +14,11 @@ const DropdownMenu = () => {
     const handleItemClick = (menuItem) => {
         console.log(`Geselecteerd menu-item: ${menuItem}`);
         toggleDropdown();
-    };
+        if (menuItem === 'Log uit') {
+            props.onLogout();
+        }
+        }
+
 
     const handleMouseEnter = () => {
         setIsOpen(true);
@@ -36,26 +39,22 @@ const DropdownMenu = () => {
         return () => {
             document.removeEventListener('mousemove', handleMouseMovement);
         };
-    }, []);
+    });
 
     return (
         <div className="dropdown-container" ref={dropdownRef}>
             <div className="dropdown-toggle" onMouseEnter={handleMouseEnter}>
-                <Link to='/products'>
-                    <img src={shop} alt="shop" className='shop' />
+                <Link to={props.menuLink}>
+                    <img src={props.image} alt={props.title} className='image' />
                 </Link>
             </div>
             {isOpen && (
                 <ul className="dropdown-menu" onMouseLeave={handleMouseLeave}>
-                    <li onClick={() => handleItemClick("Armbanden")}>
-                        <Link to='/Armbanden'>Armbanden</Link>
-                    </li>
-                    <li onClick={() => handleItemClick("Kettingen")}>
-                        <Link to='/Kettingen'>Kettingen</Link>
-                    </li>
-                    <li onClick={() => handleItemClick("Brilkoorden")}>
-                        <Link to='/Brilkoorden'>Brilkoorden</Link>
-                    </li>
+                    {props.menuItems.map((item, index) => (
+                        <li key={index} onClick={() => handleItemClick(item)}>
+                            <Link to={`/${item}`}>{item}</Link>
+                        </li>
+                    ))}
                 </ul>
             )}
         </div>

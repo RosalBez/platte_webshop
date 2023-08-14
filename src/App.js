@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './App.css';
-// import axios from "axios";
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Navigate} from 'react-router-dom'
 import Nav from "./Components/NavBar/Nav";
 import Home from './Pages/home/Home';
 import Footer from "./Components/Footer/Footer"
@@ -14,11 +13,18 @@ import FAQS from "./Pages/FAQS/FAQS"
 import Armbanden from "./Pages/ProductPage/Armbanden/Armbanden";
 import Kettingen from "./Pages/ProductPage/Kettingen/Kettingen";
 import Brilkoorden from "./Pages/ProductPage/Brilkoorden/Brilkoorden";
-import ProductDetailsArmbanden from './Pages/ProductPage/Armbanden/ProductDetailsArmbanden/ProductDetailsArmbanden'
-import ProductDetailsKettingen from './Pages/ProductPage/Kettingen/ProductDetailsKettingen/ProductDetailsKettingen'
-import ProductDetailsBrilkoorden from './Pages/ProductPage/Brilkoorden/ProductDetailsBrilkoorden/ProductDetailsBrilkoorden'
+import Profiel from "./Pages/Register-sign-in/Profiel/Profiel";
+import Wensenlijst from "./Pages/Register-sign-in/Wensenlijst/Wensenlijst";
+import GebruikersGegevens from "./Pages/Register-sign-in/mijn gegevens/gebruikers_gegevens";
+import {AuthenticationContext} from "./context/AuthenticationProvider/AuthenticationContext";
+import ProductDetails from "./Pages/ProductPage/ProductDetails/ProductDetails";
+import Bestellingen from "./Pages/Register-sign-in/bestellingen/bestellingen";
+
 
 function App() {
+    const {isAuth} = useContext(AuthenticationContext)
+    console.log(isAuth)
+
     return (
         <>
 
@@ -29,13 +35,22 @@ function App() {
                 <Route path='/about' element={<About/>}/>
                 <Route path='/products' element={<Products/>}/>
                 <Route path='/Armbanden' element={<Armbanden/>}/>
-                <Route path='/productDetailsArmbanden/:id' element={<ProductDetailsArmbanden/>}/>
                 <Route path='/Kettingen' element={<Kettingen/>}/>
-                <Route path='/productDetailsKettingen/:id' element={<ProductDetailsKettingen/>}/>
                 <Route path='/Brilkoorden' element={<Brilkoorden/>}/>
-                <Route path='/productDetailsBrilkoorden/:id' element={<ProductDetailsBrilkoorden/>}/>
+                <Route path="/products/:productId" element={<ProductDetails/>} />
+
+
+
                 <Route path='/RegisterSignIn' element={<RegisterSignIn/>}/>
+                <Route path='/Profiel' element={ isAuth ? <Profiel/> : <Navigate/>}/>
+                <Route path='/Wensenlijst' element={ isAuth ? <Wensenlijst/> : <Navigate/>}/>
+                <Route path='/Bestellingen' element={ isAuth ? <Bestellingen/> : <Navigate/>}/>
+                <Route path='/Profiel/GebruikersGegevens' element={ isAuth ? <GebruikersGegevens/> : <Navigate/>}/>
+                <Route path='/Profiel/Wensenlijst' element={ isAuth ? <Wensenlijst/> : <Navigate/>}/>
+                <Route path='/Profiel/Bestellingen' element={ isAuth ? <Bestellingen/> : <Navigate/>}/>
+
                 <Route path='/shoppingcart' element={<Shoppingcart/>}/>
+
                 <Route path='/FAQS' element={<FAQS/>}/>
                 <Route path='*' element={<NotFound/>}/>
             </Routes>

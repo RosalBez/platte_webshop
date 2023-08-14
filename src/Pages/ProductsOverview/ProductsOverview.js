@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import Photo1 from '../../assets/photos/photo1.jpg'
+import { NavLink } from 'react-router-dom';
+
 import Product from "../../Components/Product/Product";
 import './ProductsOverview.css'
 
-function ProductsOverview(props) {
+function ProductsOverview() {
     return (
         <>
             <h1> Alle producten </h1>
@@ -26,7 +26,8 @@ function ProductsOverview(props) {
                 </h4>
             </nav>
 
-                    <Product image={Photo1}></Product>
+            <Product/>
+
 
         </>
     );

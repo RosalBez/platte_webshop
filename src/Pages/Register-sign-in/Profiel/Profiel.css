@@ -1,0 +1,66 @@
+.profile-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Zorgt ervoor dat de positionering van child elements relatief is aan deze div */
+
+}
+
+.profile-image {
+    width: 15vw;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+/******welkom tekst met username*****/
+.welcome-text {
+    color: #261397;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/******buttons*******/
+.profile-buttons {
+    display: flex;
+    flex-direction:  column;
+    align-items: flex-start;
+    gap: 10px;
+
+
+}
+
+.profile-button {
+    height: 8vh;
+    width: 12vw;
+    border-radius: 25px;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #261397;
+    background-color: #C2B8ED;
+    border: none;
+
+}
+
+.logout-button-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logout {
+    color: #F68037;
+    height: 3vw;
+    width: 9vw;
+    font-size: 12px;
+    border-radius: 25px;
+    margin: 20px;
+    text-transform: uppercase;
+
+}
+

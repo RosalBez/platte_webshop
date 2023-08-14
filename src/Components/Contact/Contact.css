@@ -33,13 +33,10 @@
 }
 
 .label-message > textarea {
-    border-color: #C2B8ED;
+    border: #C2B8ED 2px solid;
     color: #261397;
 }
 
-.label-message > textarea :  {
-    border-color: none;
-}
 
 
 
