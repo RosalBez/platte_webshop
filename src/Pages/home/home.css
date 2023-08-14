@@ -2,7 +2,7 @@
 .main-container {
     width: 95vw;
 }
-/*////////////header//////////////*/
+/*////////////header met specifieke headerbutton//////////////*/
 
 
 .header-button {
@@ -13,8 +13,8 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 21px;
-    color: #261397;
-    background-color: #F68037;
+    color: var(--darkpurple-color);
+    background-color: var(--orange-color);
     border: none;
     border-radius: 25px;
     width: 17vw;
@@ -24,14 +24,13 @@
 }
 
 .header-button:hover {
-    /* Stijl bij hover */
-    background-color: #C2B8ED;
-    color: #261397;
+    background-color: var(--lightpurple-color);
+    color: var(--darkpurple-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 2px 0 4px rgba(0, 0, 0, 0.2);
     text-decoration: underline;
 }
 
-/**********log in button and picture*************/
+/**********log in specifieke button and picture*************/
 
 .login {
     display: flex;
@@ -65,11 +64,11 @@
 .login-button {
     width: 15vw;
     position: absolute;
-    top: 119%;
+    top: 115%;
     left: 44%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    color: #F68037;
+    color: var(--orange-color);
     border: none;
     font-size: 16px;
 }
@@ -85,37 +84,14 @@
     text-align: center;
     margin-top: -100px;
 
+
 }
 
 .login-text > h2 {
     margin-bottom: 15px;
+    padding-left: 15px;
+    font-size: 24px;
+    padding-top: 20px;
 }
 
 
-.register-button {
-    width: 15vw;
-    height: 5vh;
-    /*position: absolute;*/
-    top: 165%;
-    left: 65%;
-    background-color: #C2B8ED;
-    color: #261397;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-top: 20px;
-
-}
-/********nieuw section***********/
-
-.new-section {
-    font-size: 16px;
-    text-decoration: underline;
-    text-transform: uppercase;
-    color: #261397;
-    margin-top: 305px;
-    margin-bottom:  305px;
-    border: blue;
-    border-style: solid;
-}

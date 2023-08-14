@@ -1,7 +1,8 @@
 import React, {useContext, useState} from 'react';
 import axios from 'axios';
-import './Register.css';
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
+import './../../Styles/Buttons.css'
+import './Register.css';
 
 
 function Register(props) {
@@ -13,7 +14,7 @@ function Register(props) {
         username: '',
         email: '',
         password: '',
-        address: '',
+        address: '', /*****deze kun je niet mee geven in de backend van novi**/
 
 
     });
@@ -28,11 +29,11 @@ function Register(props) {
             if (res.status === 200) {
                 setSuccess(true);
                 setFormState({
-                    name: '',
+                    name: '', /*****deze kun je niet mee geven in de backend van novi**/
                     username: '',
                     email: '',
                     password: '',
-                    address: '',
+                    address: '', /*****deze kun je niet mee geven in de backend van novi**/
 
                 })
             }
@@ -117,13 +118,13 @@ function Register(props) {
                                 id='register-address'
                                 name='address'
                                 value={formState.address}
-                                placeholder='straat, huisnr. woonplaats'
+                                placeholder='   straat, huisnr. woonplaats'
                                 onChange={handleInputChange}
                             />
                         </label>
 
 
-                        <span className='register-button-two'>
+                        <span className='register-button'>
                             <button type='submit'>Registreer</button>
                         </span>
                         {error && (

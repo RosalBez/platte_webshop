@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './NewProducts.css';
 import { Link } from 'react-router-dom';
 import { importedImages} from "../Product/Product";
+import './../../Styles/Products.css';
+import './NewProducts.css';
 
 const NewProducts = () => {
     const [loading, setLoading] = useState(false);
@@ -48,12 +49,12 @@ const NewProducts = () => {
 
                         return (
                             <li className="product-card" key={product.id}>
-                                <div className="product-details">
-                                    <img src={imageSrc} alt={product.title} />
+                                <Link to={`/products/${product.id}?image=${encodeURIComponent(imageSrc)}`}>
+                                    <img className='product-image' src={imageSrc} alt={product.title} />
                                     <h4 className="product-title">
                                         {product.title.slice(0, 11)} €{product.price}
                                     </h4>
-                                </div>
+                                </Link>
                             </li>
                         );
                     })}

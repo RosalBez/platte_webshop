@@ -1,12 +1,12 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 import head from '../../assets/photos/header.png'
 import login from '../../assets/photos/login.jpg'
 import signature from '../../assets/Specifics/signatuur.svg'
-import './home.css';
-import {NavLink} from "react-router-dom";
-import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
 import NewProducts from "../../Components/NewProduct/NewProducts";
+import './../../Styles/Buttons.css'
+import './home.css';
 
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
                     <header className='inner-content-container header-content'>
                         <img src={head} alt='girl with sunglasses' className="header-image"/>
                         <NavLink to='/products'>
-                            <Button className='header-button' title="Shop nu"/>
+                            <button className='header-button'>Shop nu</button>
                         </NavLink>
                     </header>
 
@@ -26,7 +26,7 @@ function Home() {
                         <img src={login} alt='laying girl with sunglasses' className='login-picture'/>
                         <img src={signature} alt='signature' className='login-signature'/>
                         <NavLink to='/RegisterSignIn'>
-                            <Button className='login-button' title='Log In'/>
+                            <button className='login-button'>Log In</button>
                         </NavLink>
 
                         <Card className='login-text' title='Al een account?'>
@@ -38,7 +38,7 @@ function Home() {
                             </p>
 
                             <NavLink to='/RegisterSignIn'>
-                                <Button className='register-button' title='Registreer nu'/>
+                                <button>Registreer nu</button>
                             </NavLink>
                         </Card>
                     </span>

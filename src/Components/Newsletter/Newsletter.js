@@ -18,15 +18,16 @@ function Newsletter() {
 
     return (
         <div className="email-form">
-            <h2 className='newsletter-name'>Op de hoogte blijven? Schrijf je in voor de nieuwsbrief:</h2>
-            <form onSubmit={handleSubmit}>
+            <h2>Op de hoogte blijven? Schrijf je in voor de nieuwsbrief:</h2>
+            <form className='newsletter-form' onSubmit={handleSubmit}>
                 <input
+                    className='newsletter-input'
                     type="email"
                     placeholder="Voer je e-mailadres in"
                     value={email}
                     onChange={handleInputChange}
                 />
-                <button type="submit">Inschrijven</button>
+                <button className='newsletter-button' type="submit">Inschrijven</button>
             </form>
 
         </div>

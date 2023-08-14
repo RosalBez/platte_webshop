@@ -38,11 +38,11 @@
 
 .homepage_register_sign_in {
     text-transform: uppercase;
-    color: #261397;
+    color: var(--darkpurple-color);
 }
 
 .homepage_register_sign_in:hover {
-    color: #F68037;
+    color: var(--orange-color);
     text-decoration: underline;
 }
 

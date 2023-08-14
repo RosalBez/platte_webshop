@@ -41,11 +41,11 @@ function ProfilePicture() {
                     }
                 )
                 .then(response => {
-                    console.log('Upload successful:', response.data);
+                    console.log('Profielfoto geupload:', response.data);
                     setUserImage(base64Image); // Update de afbeelding met de nieuwe base64-afbeelding
                 })
                 .catch(error => {
-                    console.error('Upload failed:', error);
+                    console.error('Uploaden van profielfoto niet gelukt:', error);
                 });
         }
     };
@@ -61,7 +61,7 @@ function ProfilePicture() {
                 style={{ display: 'none' }}
                 onChange={handleFileChange}
             />
-            <label htmlFor="fileInput">Upload profielfoto</label>
+            <label htmlFor="fileInput"><button>Upload profielfoto</button></label>
         </div>
     );
 }

@@ -1,6 +1,3 @@
-input {
-    margin-bottom: 10px;
-}
 
 .searchbar  {
     text-align: center;
@@ -10,12 +7,19 @@ input {
     border-radius: 25px;
     width: 12vw;
     height: 4.5vh;
-
-
-
+    margin-bottom: 10px;
 
 }
 
 .searchbar::placeholder{
     color: #261397;
+
 }
+
+.search-results {
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    flex: 1 17%;
+}
+

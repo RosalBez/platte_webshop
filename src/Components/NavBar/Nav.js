@@ -10,7 +10,7 @@ import shop from '../../assets/Specifics/shop.svg'
 import DropdownMenu from "./dropdownmenu/DropdownNavItem";
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
 
-function Nav(props) {
+const Nav = ({ onSearch})=> {
     const {isAuth, logout} = useContext(AuthenticationContext)
 
 
@@ -42,7 +42,7 @@ function Nav(props) {
                             menuItems={['armbanden', 'kettingen', 'brilkoorden']}
                         />
 
-                        <li><SearchBar/></li>
+                        <li><SearchBar onSearch={onSearch}/></li>
 
                         <li>
                             <NavLink to='/shoppingcart'>

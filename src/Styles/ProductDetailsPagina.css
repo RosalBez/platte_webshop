@@ -24,7 +24,7 @@
 }
 
 .product-description-title {
-    color: #261397;
+    color: var(--darkpurple-color);
     margin: 0px 20px 10px 0px;
 
 }
@@ -40,7 +40,7 @@
 .description-details {
     width: 500px;
     margin-left: 20px;
-    color: #261397;
+    color: var(--darkpurple-color);
     font-weight: lighter;
 }
 
@@ -54,7 +54,7 @@
 
 .description-price {
     margin-left: 20px;
-    color: #F68037;
+    color: var(--orange-color);
 }
 
 .description-basket {
