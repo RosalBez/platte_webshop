@@ -1,7 +1,7 @@
 /****algemen*******/
 
 .register-form-border {
-    border: solid #C2B8ED 2px;
+    border: solid var(--lightpurple-color) 2px;
     padding: 10px 30px 14px 30px;
     margin: 20px 10px 60px 10px;
     flex-shrink: 0;
@@ -12,6 +12,7 @@
     text-align: end;
     margin-bottom: 35px;
     text-transform: lowercase;
+    color: var(--darkpurple-color)
 
 }
 
@@ -20,8 +21,6 @@
 .register-form-first-part {
     display: flex;
     flex-direction: column;
-    flex-basis: max-content;
-    min-width: 20vw;
     margin: 20px 0px 70px 20px;
     gap: 10px;
 
@@ -33,7 +32,7 @@
     justify-content: space-between;
     flex-basis: auto;
     width: 40vw;
-    color: #261397;
+    color: var(--darkpurple-color);
     text-transform: lowercase;
     font-weight: bold;
     font-size: 18px;
@@ -44,7 +43,10 @@
 
 .register-input {
     background-color: transparent;
-    border: 2px solid #C2B8ED;
+    border: 2px solid var(--lightpurple-color);
+    width: 17vw;
+    color: var(--darkpurple-color);
+    outline: none;
 
 }
 
@@ -53,82 +55,29 @@
 .register-form-second-part {
     display: flex;
     flex-direction: column;
-    width: 20vw;
     margin: 40px 0px 70px 0;
     gap: 20px;
 
 }
 
-.register-label-address {
-    color: #261397;
-    text-transform: lowercase;
-    font-weight: bold;
-    font-size: 18px;
-
-}
 
 .register-form-second-part ::placeholder {
-    color: #C2B8ED;
+    color: var(--lightpurple-color);
     text-transform: uppercase;
 }
 
-.register-input-address {
-    background-color: transparent;
-    border: 2px solid #C2B8ED;
-    width: 80vw;
-}
 
-.register-label-postcode {
-    display: flex;
-
-}
-
-.register-input-postcode{
-    background-color: transparent;
-    border: 2px solid #C2B8ED;
-}
-.register-input-housenumber {
-    background-color: transparent;
-    border: 2px solid #C2B8ED;
-    width: 10vw;
-}
-
-
-
-/****button******/
-
-.register-button-two {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-
-}
-
-
-
-
-.register-button-two > button {
-    text-transform: uppercase;
-    font-size: 18px;
-    width: 170px;
-    height: 38px;
-    border-radius: 25px;
-    margin-left: 55px;
-
-}
-
+/***error en succes message***/
 
 .error-message-register {
-    color: #F68037;
+    color: var(--orange-color);
     font-size: 14px;
     font-style: italic;
     margin-top: 10px;
 }
 
 .success-message-register {
-    color: #F68037;
+    color: var(--orange-color);
     font-size: 16px;
     font-style: italic;
     margin-top: 10px;

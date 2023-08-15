@@ -7,7 +7,7 @@ function FAQS(props) {
     return (
         <>
             <section className='inner-content-container faq-section-one'>
-                <h2>Vind hier het antwoord op jouw vragen</h2>
+                <h1>Veel gestelde vragen</h1>
                     <section className='faq-section-two'>
                         <Question
                             question='wat kan ik kopen?'

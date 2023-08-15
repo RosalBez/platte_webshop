@@ -38,7 +38,8 @@ function AuthenticationContextProvider({children}) {
                 data: {
                     email,
                     username,
-                    id
+                    id,
+                    profileImage
                 }
             } = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
                 headers: {
@@ -52,7 +53,8 @@ function AuthenticationContextProvider({children}) {
                 user: {
                     email,
                     id,
-                    username
+                    username,
+                    profileImage,
                 },
                 status: "done"
             })

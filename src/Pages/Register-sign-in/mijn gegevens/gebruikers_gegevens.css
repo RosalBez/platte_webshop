@@ -3,6 +3,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
-    color: #261397;
+    color: var(--darkpurple-color);
     margin: 50px;
 }

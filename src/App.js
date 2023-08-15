@@ -10,14 +10,14 @@ import Shoppingcart from "./Pages/Shoppingcart/Shoppingcart";
 import RegisterSignIn from "./Pages/Register-sign-in/Register_sign_in";
 import NotFound from "./Components/NotFound/NotFound";
 import FAQS from "./Pages/FAQS/FAQS"
-import Armbanden from "./Pages/ProductPage/Armbanden/Armbanden";
-import Kettingen from "./Pages/ProductPage/Kettingen/Kettingen";
-import Brilkoorden from "./Pages/ProductPage/Brilkoorden/Brilkoorden";
+import Armbanden from "./Pages/ProductPage/Armbanden";
+import Kettingen from "./Pages/ProductPage/Kettingen";
+import Brilkoorden from "./Pages/ProductPage/Brilkoorden";
 import Profiel from "./Pages/Register-sign-in/Profiel/Profiel";
 import Wensenlijst from "./Pages/Register-sign-in/Wensenlijst/Wensenlijst";
 import GebruikersGegevens from "./Pages/Register-sign-in/mijn gegevens/gebruikers_gegevens";
 import {AuthenticationContext} from "./context/AuthenticationProvider/AuthenticationContext";
-import ProductDetails from "./Pages/ProductPage/ProductDetails/ProductDetails";
+import ProductDetails from "./Pages/ProductPage/ProductDetails";
 import Bestellingen from "./Pages/Register-sign-in/bestellingen/bestellingen";
 
 

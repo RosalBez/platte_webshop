@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import {useParams, useLocation, Link} from 'react-router-dom';
 import axios from 'axios';
-import './ProductDetails.css';
-import basket from '../../../assets/Specifics/icons8-basket-100.png';
-import Arrow1 from "../../../assets/photos/Arrow1.png";
-import favorite from "../../../assets/Specifics/favorite (Stroke).svg"
+import basket from '../../assets/Specifics/icons8-basket-100.png';
+import Arrow1 from "../../assets/photos/Arrow1.png";
+import favorite from "../../assets/Specifics/favorite (Stroke).svg"
+import './../../Styles/goBackArrow.css'
+import './../../Styles/ProductDetailsPagina.css'
 
 function ProductDetails() {
     const { productId } = useParams();

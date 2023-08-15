@@ -29,11 +29,11 @@ function Contact() {
 
             <form onSubmit={handleSubmit} className='contact-form'>
 
-                <label htmlFor='name' className='label'>
+                <label htmlFor='name' className='contact-label'>
                     naam:
                     <input
-                        className='label-input'
-                        type='name'
+                        className='contact-input'
+                        type='text'
                         id='form-name'
                         name='name'
                         value={nameValue}
@@ -41,10 +41,10 @@ function Contact() {
                     />
                 </label>
 
-                <label htmlFor='form-email' className='label'>
+                <label htmlFor='form-email' className='contact-label'>
                     email:
                     <input
-                        className='label-input'
+                        className='contact-input'
                         type='email'
                         id='form-email'
                         name='email'
@@ -53,10 +53,10 @@ function Contact() {
                     />
                 </label>
 
-                <label htmlFor='message' className='label-message'>
+                <label htmlFor='message' className='message-label'>
                     bericht:
                     <textarea
-                        className='label-input'
+                        className='message-input'
                         id='form-message'
                         name='message'
                         value={messageValue}

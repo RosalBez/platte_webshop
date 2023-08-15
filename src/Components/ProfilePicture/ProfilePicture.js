@@ -1,18 +1,19 @@
-import React, {useEffect, useState, useContext} from 'react';
-import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
+import React, { useEffect, useState, useContext } from 'react';
+import { AuthenticationContext } from '../../context/AuthenticationProvider/AuthenticationContext';
 import axios from 'axios';
+import profielfoto from './../../assets/photos/profile_picture.jpg';
 import './ProfilePicture.css';
 
 function ProfilePicture() {
-    const {user} = useContext(AuthenticationContext)
+    const { user } = useContext(AuthenticationContext);
     const [userImage, setUserImage] = useState(null);
+    const [uploadMode, setUploadMode] = useState(true); // Nieuwe toestand voor de modus
 
     useEffect(() => {
         if (user && user.profileImage) {
             setUserImage(user.profileImage);
         }
-    }, [user])
-
+    }, [user]);
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
@@ -21,13 +22,21 @@ function ProfilePicture() {
             reader.readAsDataURL(selectedFile);
             reader.onload = () => {
                 const base64Image = reader.result;
-                uploadImage(base64Image);
+                setUserImage(base64Image); // Toon de voorvertoning van de nieuwe afbeelding
+                setUploadMode(false); // Schakel over naar de "Opslaan" modus
             };
         }
     };
 
+    const saveProfileImage = () => {
+        if (userImage) {
+            uploadImage(userImage);
+            setUploadMode(true); // Schakel terug naar de "Upload" modus na opslaan
+        }
+    };
+
     const uploadImage = (base64Image) => {
-        const token = localStorage.getItem('token'); // Haal de token op uit localStorage
+        const token = localStorage.getItem('token');
 
         if (token) {
             axios
@@ -36,32 +45,39 @@ function ProfilePicture() {
                     { base64Image },
                     {
                         headers: {
-                            Authorization: `Bearer ${token}`, // Voeg de token toe aan de headers
+                            'Content-Type': 'application/json',
+                            Authorization: `Bearer ${token}`,
                         },
                     }
                 )
-                .then(response => {
-                    console.log('Upload successful:', response.data);
-                    setUserImage(base64Image); // Update de afbeelding met de nieuwe base64-afbeelding
+                .then((response) => {
+                    console.log('Profielfoto geupload:', response.data);
+                    setUserImage(base64Image);
                 })
-                .catch(error => {
-                    console.error('Upload failed:', error);
+                .catch((error) => {
+                    console.error('Uploaden van profielfoto niet gelukt:', error);
                 });
         }
+
+
     };
 
     return (
         <div className='profile-picture'>
-            <img className='uploaded-picture' src={userImage || 'default_image_url.jpg'} alt='person' />
+            <img className='uploaded-picture' src={userImage || profielfoto} alt='person' />
             <input
                 className='uploaded-picture-input'
                 type='file'
                 accept='image/*'
-                id="fileInput"
+                id='fileInput'
                 style={{ display: 'none' }}
                 onChange={handleFileChange}
             />
-            <label htmlFor="fileInput">Upload profielfoto</label>
+            {uploadMode ? (
+                <button type='button'> <label htmlFor='fileInput'>Wijzig profielfoto</label></button>
+            ) : (
+                <button onClick={saveProfileImage}>Opslaan</button>
+            )}
         </div>
     );
 }

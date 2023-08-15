@@ -1,18 +1,41 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import Arrow1 from "../../../assets/photos/Arrow1.png";
-import './Wensenlijst.css'
+import {NavLink} from "react-router-dom";
+import './../../../Styles/Buttons.css'
 
-function Wensenlijst() {
+function Wensenlijst(props) {
     return (
         <div className='inner-content-container'>
-            <h1>Jouw wensen</h1>
 
-            <Link to='/profiel'><img className='go-back-arrow' src={Arrow1} alt='go-back-arrow' /></Link>
-
-            <div className='favorites-overview'>
-                <p>wensenlijst</p>
+            <div className='orders-overview'>
+                <h1>Jouw wensen</h1>
+                <p> Helaas, deze pagina bestaat nog niet. Waar wil je nu heen? Kies hieronder!</p>
             </div>
+            <NavLink to='/'>
+                <button>Home</button>
+            </NavLink>
+
+            <NavLink to='/about'>
+                <button>Over</button>
+            </NavLink>
+
+            <NavLink to='/RegisterSignIn'>
+                <button>Registreer/Log in</button>
+
+            </NavLink>
+
+            <NavLink to='/products'>
+                <button>Shop</button>
+            </NavLink>
+
+            <NavLink to='/profiel'>
+                <button>Mijn profielpagina</button>
+            </NavLink>
+
+            <NavLink to='/bestellingen'>
+                <button>Mijn bestellingen</button>
+            </NavLink>
+
+
         </div>
     );
 }

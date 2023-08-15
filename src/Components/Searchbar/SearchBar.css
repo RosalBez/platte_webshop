@@ -1,21 +1,26 @@
-input {
-    margin-bottom: 10px;
-}
 
 .searchbar  {
     text-align: center;
-    color: #261397;
+    color: var(--darkpurple-color);
     background-color: #C2B8ED;
     border: none;
     border-radius: 25px;
     width: 12vw;
     height: 4.5vh;
-
-
+    margin-bottom: 10px;
+    outline: none;
 
 
 }
 
 .searchbar::placeholder{
-    color: #261397;
+    color: var(--darkpurple-color);
+
 }
+
+.search-results {
+    display: flex;
+    flex-direction: row;
+    flex: 1 17%;
+}
+

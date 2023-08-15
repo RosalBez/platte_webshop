@@ -1,4 +1,14 @@
+/*********bij doorontwikkeling is een eigen css pagina prettig***********/
+
 .orders-overview {
-    color: #261397;
+    color: var(--darkpurple-color);
     margin: 40px;
+}
+
+.order-page {
+    margin: 7px;
+    width: 55px;
+    height: 22px;
+    font-size: 12px;
+
 }

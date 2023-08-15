@@ -1,11 +1,14 @@
 import React, {useContext, useState} from 'react';
 import axios from "axios";
 import {AuthenticationContext} from "../../context/AuthenticationProvider/AuthenticationContext";
+import {Link} from "react-router-dom";
+import './../../Styles/Buttons.css'
 import './LogIn.css'
 
 
+
 function LogIn(props) {
-    const {login} = useContext(AuthenticationContext)
+    const {login, isAuth} = useContext(AuthenticationContext)
     const [error, setError] = useState(false);
 
 
@@ -33,7 +36,7 @@ function LogIn(props) {
 
 
     return (
-        <div className='inner-content-container login-background-style'>
+        <div className='inner-content-container' >
 
 
             <form className='login-form' onSubmit={handleSubmit}>
@@ -67,10 +70,13 @@ function LogIn(props) {
                 </label>
 
                 <span className='login-button-two'>
-
-                            <button type='submit'> Login </button>
-
-
+                    {isAuth ? (
+                        <Link to='/profiel' >
+                            <button typ='button'>naar profielpagina</button>
+                        </Link>
+                        ) : (
+                            <button type='submit'>Login</button>
+                        )}
                     </span>
                 {error && <p className='error-message-login'>Onjuist email en wachtwoord combinatie, probeer het nog eens</p>}
             </form>

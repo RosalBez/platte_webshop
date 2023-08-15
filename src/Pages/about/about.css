@@ -1,4 +1,4 @@
-/******* algemeen *****/
+
 
 /******* about *************/
 
@@ -15,7 +15,7 @@
     width: 31vw;
     height: 75vh;
     margin-bottom: 150px;
-    border: 2px solid #C2B8ED;
+    border: 2px solid var(--lightpurple-color);
     padding: 8px;
     border-radius: 25px 0px;
 
@@ -36,13 +36,13 @@
 }
 
 .about-card > h2 {
-    color: #261397;
+    color: var(--darkpurple-color);
     text-transform: uppercase;
     font-weight: lighter;
 }
 .about-card > p {
     width: 20vw;
-    color: #F68037;
+    color: var(--orange-color);
 
 }
 
@@ -68,7 +68,6 @@
     justify-content: center;
     margin-top: 40px;
     padding-right: 65px;
-    /*padding-left: 150px;*/
     gap: 100px;
 
 }
@@ -77,7 +76,7 @@
     width: 25vw;
     height: 75vh;
     margin-bottom: 250px;
-    border: 2px solid #F68037;
+    border: 2px solid var(--orange-color);
     padding: 8px;
     border-radius: 0px 25px;
 
@@ -91,7 +90,7 @@
     align-items: center;
     flex-shrink: 1;
     flex-grow: 0;
-    color: #261397;
+    color: var(--darkpurple-color);
     margin-bottom: 250px;
     width: 30vw;
     text-align: left;
@@ -102,7 +101,7 @@
 }
 
 .contact-card > h2 {
-    color: #F68037;
+    color: var(--orange-color);
     text-transform: uppercase;
     font-weight: lighter;
     padding-left: 55px;

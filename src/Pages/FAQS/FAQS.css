@@ -1,17 +1,8 @@
-h2 {
-    color: #261397;
-    padding-left: 15px;
-    font-size: 24px;
-    padding-top: 20px;
-}
-
-
-
 .faq-section-two {
     width: 75vw;
     margin: 20px 0px;
-    color: #261397;
-    border: 3px solid #F68037;
+    color: var(--darkpurple-color);
+    border: 3px solid var(--orange-color);
     padding: 15px;
     border-radius: 25px 0px;
 
@@ -19,7 +10,7 @@ h2 {
 
 .faq-last-question {
     padding: 15px;
-    color: #F68037;
+    color: var(--orange-color);
     font-size: 16px;
     width: 65vw;
 }
@@ -27,7 +18,7 @@ h2 {
 
 
 .faq-contact {
-    color: #F68037;
+    color: var(--orange-color);
     text-decoration: none;
     font-size: 16px;
 
@@ -35,6 +26,6 @@ h2 {
 
 .faq-contact:hover {
     text-decoration: underline;
-    color: #261397;
+    color: var(--darkpurple-color);
 }
 

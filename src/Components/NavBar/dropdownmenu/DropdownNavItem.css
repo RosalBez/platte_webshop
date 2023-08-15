@@ -25,17 +25,17 @@
     padding: 0;
     margin-top: 1px;
     list-style: none;
-    border: #C2B8ED 2px solid;
+    border: var(--lightpurple-color) 2px solid;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-menu li {
-    color: #261397;
+    color: var(--darkpurple-color);
     padding: 10px;
 
 }
 
 .dropdown-menu li:hover {
-    background-color: #C2B8ED;
+    background-color: var(--lightpurple-color);
 }
 

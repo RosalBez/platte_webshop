@@ -8,15 +8,17 @@
 
 }
 
-.label-input {
+.contact-input {
     display: flex;
     flex-direction: row;
-    /*justify-content: space-between;*/
     align-items: stretch;
+    border-color: var(--lightpurple-color);
+    outline: none;
+
 
 }
 
-.label {
+.contact-label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,7 +26,7 @@
 
 }
 
-.label-message {
+.message-label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,9 +34,11 @@
 
 }
 
-.label-message > textarea {
-    border: #C2B8ED 2px solid;
-    color: #261397;
+.message-input {
+    border: var(--lightpurple-color) 2px solid;
+    color: var(--darkpurple-color);
+    outline:none;
+
 }
 
 

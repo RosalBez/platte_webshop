@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Product.css';
+import '../../Styles/Products.css';
 import photo1 from '../../assets/photos/photo1.jpg'
 import photo2 from '../../assets/photos/photo2.jpg';
 import photo3 from '../../assets/photos/photo3.jpg';
@@ -72,26 +72,23 @@ const Product = (props) => {
 
             <div className="inner-content-container">
                 <h1>{props.title}</h1>
-                <ul className="product-overview">
+
+                <div className="product-overview">
                     {data.map((product, index) => {
                         // Kiest de afbeelding op basis van het huidige productindex
                         const imageIndex = index % importedImages.length;
                         const imageSrc = importedImages[imageIndex];
 
                         return (
-                            <li className="product-card" key={product.id}>
+                            <div className="product-card" key={product.id}>
                                 <Link to={`/products/${product.id}?image=${encodeURIComponent(imageSrc)}`}>
-                                    <div className="product-details">
-                                        <img className='product-image' src={imageSrc} alt={product.title} />
-                                        <h4 className='product-title'>
-                                            {product.title.slice(0, 11)} €{product.price}
-                                        </h4>
-                                    </div>
+                                    <img className='product-image' src={imageSrc} alt={product.title} />
+                                    <h4 className='product-title'> {product.title.slice(0, 11)} €{product.price}</h4>
                                 </Link>
-                            </li>
+                            </div>
                         );
                     })}
-                </ul>
+                </div>
             </div>
         </>
     );
