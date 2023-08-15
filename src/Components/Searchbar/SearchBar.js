@@ -51,7 +51,7 @@ const SearchBar = () => {
                 onChange={handleInputChange}
             />
             <div id="searchResults" className='search-results'>
-                {searchResults.length === 0 ? null : (
+                {searchItem.length === 0 ? null : (
                     searchResults.map((product, index) => (
                         <Link
                             key={product.id}
