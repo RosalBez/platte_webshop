@@ -3,7 +3,7 @@
 .navigation {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     background-color: transparent;
@@ -18,7 +18,7 @@
 .left-side-nav > ul {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     list-style: none;
 
 }
@@ -36,35 +36,8 @@
 
 }
 
-.homepage_register_sign_in {
+.shop {
     text-transform: uppercase;
-    color: var(--darkpurple-color);
-}
-
-.homepage_register_sign_in:hover {
-    color: var(--orange-color);
-    text-decoration: underline;
-}
-
-/*********right side************/
-
-.right-side-nav > ul {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    list-style: none;
-    margin-right: 20px;
-}
-
-
-
-
-.basket {
-    width: 68px;
-    height: 38px;
-    padding-bottom: 1px;
-
-
 }
 
 

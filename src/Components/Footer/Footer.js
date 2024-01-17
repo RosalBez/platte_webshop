@@ -1,6 +1,5 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import Newsletter from "../Newsletter/Newsletter"
 import './Footer.css'
 import insta from '../../assets/Specifics/noun-camera-5053228.png'
 import footerLogo from "../../assets/Specifics/LOGO NAV.png";
@@ -10,7 +9,7 @@ function Footer(props) {
     return (
         <footer className='footer'>
             <div className='left-side-footer'>
-                <Newsletter/>
+
                 <NavLink to='https://www.instagram.com/rsl_concept/' target="_blank">
                     <img src={insta} alt='instagram' className='insta-footer'/>
                 </NavLink>
